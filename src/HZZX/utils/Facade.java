@@ -30,4 +30,5 @@ public class Facade {
     public void zhuceverify2(String a) {
         s.ZhuceVerify2(a);
     }
+
 }

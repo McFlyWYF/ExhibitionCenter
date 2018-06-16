@@ -53,6 +53,7 @@ public class SQLserver {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     //注册用户的方法
@@ -107,7 +108,8 @@ public class SQLserver {
     //	登录验证方法
     public void SQLverify2(String a, String b) {
         try {
-            ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");ps.setString(1, a);
+            ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");
+            ps.setString(1, a);
             ps.setString(2, b);
 
             // ResultSet结果集,把ResultSet理解成返回一张表行的结果集
