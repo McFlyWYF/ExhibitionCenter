@@ -1,39 +1,37 @@
-package HZZX.informationManager;
+package HZZX.ticket;
 
 import HZZX.bean.MeetingInformation;
+import HZZX.bean.TicketInformation;
 import HZZX.manager.Information;
 import HZZX.utils.DatabaseConnection;
-import HZZX.utils.Facade;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 
-/*
-添加会展信息
- */
-public class InsertInformations extends JFrame implements ActionListener {
+public class BuyTicket extends JFrame implements ActionListener {
 
     JTextField jtf1, jtf2, jtf3, jtf4, jtf5, jtf6, jtf7, jtf8 = null;
     JLabel jl1, jl2, jl3, jl4, jl5, jl6, jl7, jl8 = null;
     JPanel jp1, jp2, jp3, jp4, jp5, jp6, jp7, jp8 = null;
     JButton jb1, jb2;
-    String m_id, m_name, b_id, t_id, t_name, address, time, kind;
+    String id,name,sex,work,m_id,price ;
 
-    public InsertInformations() {
+    public BuyTicket() {
 
-        jl1 = new JLabel(" 展会编号：");
-        jl2 = new JLabel("    展会名称：");
-        jl3 = new JLabel(" 展商编号：");
-        jl4 = new JLabel("    展品编号：");
-        jl5 = new JLabel(" 展品名称：");
-        jl6 = new JLabel("    地址：");
-        jl7 = new JLabel("时间：");
-        jl8 = new JLabel("    类别：");
+        jl7 = new JLabel(" 会展中心购票系统");
+        jl1 = new JLabel(" 购票编号：");
+        jl2 = new JLabel(" 姓名：");
+        jl3 = new JLabel(" 性别：");
+        jl4 = new JLabel(" 职业：");
+        jl5 = new JLabel(" 会展编号：");
+        jl6 = new JLabel(" 售价：");
 
-        jb1 = new JButton("发布");
+        jb1 = new JButton("购票");
         jb2 = new JButton("返回");
 
         jb1.addActionListener(this);
@@ -45,8 +43,6 @@ public class InsertInformations extends JFrame implements ActionListener {
         jtf4 = new JTextField(6);
         jtf5 = new JTextField(6);
         jtf6 = new JTextField(6);
-        jtf7 = new JTextField(6);
-        jtf8 = new JTextField(6);
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -73,18 +69,15 @@ public class InsertInformations extends JFrame implements ActionListener {
         jp3.add(jl6);
         jp3.add(jtf6);
 
-        jp4.add(jl7);
-        jp4.add(jtf7);
-        jp4.add(jl8);
-        jp4.add(jtf8);
-
         jp5.add(jb1);
         jp5.add(jb2);
+
+        jp6.add(jl7);
 
         this.add(jp1);
         this.add(jp2);
         this.add(jp3);
-        this.add(jp4);
+        this.add(jp6);
         this.add(jp5);
 
         this.setVisible(true);
@@ -100,35 +93,31 @@ public class InsertInformations extends JFrame implements ActionListener {
         int result = 0;
         try {
             con = DatabaseConnection.getConnection();
-            String sql = "insert into Meeting values(?,?,?,?,?,?,?,?)";
+            String sql = "insert into Ticket values(?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
-            MeetingInformation mi = new MeetingInformation();
+            TicketInformation mi = new TicketInformation();
 
-            mi.setM_id(jtf1.getText());
-            mi.setM_name(jtf2.getText());
-            mi.setB_id(jtf3.getText());
-            mi.setT_id(jtf4.getText());
-            mi.setT_name(jtf5.getText());
-            mi.setAddress(jtf6.getText());
-            mi.setTime(jtf7.getText());
-            mi.setKind(jtf8.getText());
+            mi.setId(jtf1.getText());
+            mi.setName(jtf2.getText());
+            mi.setSex(jtf3.getText());
+            mi.setWork(jtf4.getText());
+            mi.setM_id(jtf5.getText());
+            mi.setPrice(jtf6.getText());
 
-            m_id = jtf1.getText();
-            m_name = jtf2.getText();
-            b_id = jtf3.getText();
-            t_id = jtf4.getText();
-            t_name = jtf5.getText();
-            address = jtf6.getText();
-            time = jtf7.getText();
-            kind = jtf8.getText();
-            ps.setString(1,m_id);
-            ps.setString(2, m_name);
-            ps.setString(3, b_id);
-            ps.setString(4, t_id);
-            ps.setString(5, t_name);
-            ps.setString(6, address);
-            ps.setString(7, time);
-            ps.setString(8, kind);
+            id = jtf1.getText();
+            name = jtf2.getText();
+            sex = jtf3.getText();
+            work = jtf4.getText();
+            m_id = jtf5.getText();
+            price = jtf6.getText();
+
+            ps.setString(1,id);
+            ps.setString(2, name);
+            ps.setString(3, sex);
+            ps.setString(4, work);
+            ps.setString(5, m_id);
+            ps.setString(6, price);
+
             result = ps.executeUpdate();
 
         } catch (SQLException e) {
@@ -141,12 +130,12 @@ public class InsertInformations extends JFrame implements ActionListener {
             }
         }
         if (result == 1){
-            JOptionPane.showMessageDialog(null,"插入数据成功","提示消息",JOptionPane.WARNING_MESSAGE);
-            System.out.println("插入数据成功");
+            JOptionPane.showMessageDialog(null,"购票成功","提示消息",JOptionPane.WARNING_MESSAGE);
+            System.out.println("购票成功");
             clear();
         }else if (result == 0) {
-            JOptionPane.showMessageDialog(null, "插入数据成功", "提示消息", JOptionPane.WARNING_MESSAGE);
-            System.out.println("插入数据失败");
+            JOptionPane.showMessageDialog(null, "购票失败", "提示消息", JOptionPane.WARNING_MESSAGE);
+            System.out.println("购票失败");
         }
     }
 
@@ -157,8 +146,6 @@ public class InsertInformations extends JFrame implements ActionListener {
         jtf4.setText("");
         jtf5.setText("");
         jtf6.setText("");
-        jtf7.setText("");
-        jtf8.setText("");
 
     }
     @Override
@@ -166,7 +153,7 @@ public class InsertInformations extends JFrame implements ActionListener {
         if (e.getActionCommand() == "返回") {
             this.dispose();
             new Information();
-        } else if (e.getActionCommand() == "发布") {
+        } else if (e.getActionCommand() == "购票") {
             insertinformation();
         }
     }

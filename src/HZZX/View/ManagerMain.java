@@ -54,7 +54,6 @@ public class ManagerMain extends JFrame implements ActionListener {
         this.add(jp4);
 
         this.setVisible(true);
-        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(4, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

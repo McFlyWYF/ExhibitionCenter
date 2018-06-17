@@ -1,5 +1,7 @@
 package HZZX.View;
 
+import HZZX.bean.MeetingInformation;
+import HZZX.utils.DatabaseConnection;
 import sun.applet.Main;
 
 import javax.swing.*;
