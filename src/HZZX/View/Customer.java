@@ -1,5 +1,7 @@
 package HZZX.View;
 
+import HZZX.ticket.BuyTicket;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -32,6 +34,7 @@ public class Customer extends JFrame implements ActionListener {
         jb5.setFont(font2);
 
         jb5.addActionListener(this);
+        jb3.addActionListener(this);
 
 
         jp1 = new JPanel();
@@ -55,7 +58,7 @@ public class Customer extends JFrame implements ActionListener {
         this.add(jp4);
 
         this.setVisible(true);
-        this.setResizable(false);
+        //this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -66,6 +69,9 @@ public class Customer extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "退出"){
             System.exit(0);
+        }else if (e.getActionCommand() == "门票预定"){
+            this.dispose();
+            new BuyTicket();
         }
     }
 }

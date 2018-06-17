@@ -18,7 +18,7 @@ public class Thing extends JFrame{
         this.add(jp1);
 
         this.setVisible(true);
-        this.setResizable(false);
+//        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(3, 1));
         this.setBounds(300, 200, 600, 380);

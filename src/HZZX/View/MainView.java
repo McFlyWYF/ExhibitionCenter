@@ -81,7 +81,7 @@ public class MainView extends JFrame implements ActionListener {
         this.add(jp3);
 
         this.setVisible(true);
-        this.setResizable(false);
+        //this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
