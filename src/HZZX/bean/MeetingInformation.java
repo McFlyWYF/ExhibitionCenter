@@ -10,6 +10,7 @@ public class MeetingInformation {
     private String address;
     private String time;
     private String kind;
+    private String price;
 
     public String getM_id() {
         return m_id;
@@ -73,5 +74,13 @@ public class MeetingInformation {
 
     public void setKind(String kind) {
         this.kind = kind;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
     }
 }

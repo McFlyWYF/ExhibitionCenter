@@ -102,14 +102,14 @@ public class RegisterView extends JFrame implements ActionListener {
 
     //管理员注册方法
     public void zhuce1() {
-        String account = "\\w{3,8}"; //管理员用户名必须是3-8位
+        String account = "\\w{3,6}"; //管理员用户名必须是3-6位
         boolean flag1 = jtf1.getText().matches(account);
 
         String password = "\\w{6}"; //密码必须是6位
         boolean flag2 = jtf2.getText().matches(password);
 
         if (flag1 == false) {
-            JOptionPane.showMessageDialog(null, "用户名填写错误,必须为3-8位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "用户名填写错误,必须为3-6位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
             jtf1.setText("");
         } else if (flag2 == false) {
             JOptionPane.showMessageDialog(null, "密码填写错误,必须为6位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
@@ -124,23 +124,23 @@ public class RegisterView extends JFrame implements ActionListener {
         }
     }
 
-    // 用户登录方法
+    // 用户注册方法
     public void zhuce2() {
-        String account = "\\w{6,11}"; //客户用户名必须是3-11位
+        String account = "\\w{7,11}"; //客户用户名必须是7-11位
         boolean flag1 = jtf1.getText().matches(account);
 
         String password = "\\w{6}"; //密码必须是6位
         boolean flag2 = jtf2.getText().matches(password);
 
         if (flag1 == false) {
-            JOptionPane.showMessageDialog(null, "用户名填写错误,必须为6-11位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "用户名填写错误,必须为7-11位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
             jtf1.setText("");
         } else if (flag2 == false) {
             JOptionPane.showMessageDialog(null, "密码填写错误,必须为6位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
             jtf2.setText("");
         } else {
             fcd.ConnectSQL();
-            fcd.zhuceverify2(jtf1.getText());
+            fcd.zhuceverify1(jtf1.getText());
             this.jtf1.setText("");
             this.jrb2.setText("");
         }

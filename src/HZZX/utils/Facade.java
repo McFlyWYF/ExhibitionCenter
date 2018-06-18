@@ -26,9 +26,4 @@ public class Facade {
         s.ZhuceVerify1(a);
     }
 
-    //是否注册成功
-    public void zhuceverify2(String a) {
-        s.ZhuceVerify2(a);
-    }
-
 }
