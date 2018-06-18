@@ -80,7 +80,7 @@ public class SQLserver {
         }
     }
 
-    //	登录验证方法
+    //	管理员登录验证方法
     public void SQLverify1(String a, String b) {
         try {
             ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");
@@ -93,12 +93,10 @@ public class SQLserver {
             if (rs.next()) {
                 user = rs.getString(1);
                 pwd = rs.getString(2);
-                JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
-//                System.out.println("成功获取到密码和用户名");
-//                System.out.println(user + "\t" + pwd + "\t");
-                System.out.println("登录成功");
+                    JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
+                    System.out.println("登录成功");
             } else {
-                JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
 
         } catch (SQLException e) {
@@ -107,7 +105,7 @@ public class SQLserver {
         }
     }
 
-    //	登录验证方法
+    //	客户登录验证方法
     public void SQLverify2(String a, String b) {
         try {
             ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");
@@ -117,19 +115,13 @@ public class SQLserver {
             // ResultSet结果集,把ResultSet理解成返回一张表行的结果集
             rs = ps.executeQuery();
 
-
-            // ResultSet结果集,把ResultSet理解成返回一张表行的结果集
-            rs = ps.executeQuery();
-
             if (rs.next()) {
                 user = rs.getString(1);
                 pwd = rs.getString(2);
-                JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
-//                System.out.println("成功获取到密码和用户名");
-//                System.out.println(user + "\t" + pwd + "\t");
-                System.out.println("登录成功");
+                    JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
+                    System.out.println("登录成功");
             } else {
-                JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
 
         } catch (SQLException e) {
@@ -157,22 +149,5 @@ public class SQLserver {
         }
     }
 
-    //注册验证方法，判断用户名是否已经存在
-    public void ZhuceVerify2(String a) {
-        try {
-            ps = ct.prepareStatement("select * from Operator where Sacc=?");
-            ps.setString(1, a);
 
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                JOptionPane.showMessageDialog(null, "该用户名已经存在", "提示信息", JOptionPane.WARNING_MESSAGE);
-            } else {
-                this.UserRegis(RegisterView.jtf1.getText(), RegisterView.jtf2.getText());
-            }
-
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-        }
-    }
 }

@@ -1,6 +1,8 @@
 package HZZX.View;
 
-import HZZX.ticket.BuyTicket;
+import HZZX.manager.informationManager.selectInformation.SelectInformation;
+import HZZX.customer.placeReserve.Reserve;
+import HZZX.customer.ticket.Ticket;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +15,7 @@ public class Customer extends JFrame implements ActionListener {
     JPanel jp1, jp2, jp3, jp4, jp5;
     JLabel jl1;
 
-    Customer() {
+    public Customer() {
 
         jb1 = new JButton("会展信息查询");
         jb2 = new JButton("展馆预约");
@@ -35,6 +37,8 @@ public class Customer extends JFrame implements ActionListener {
 
         jb5.addActionListener(this);
         jb3.addActionListener(this);
+        jb2.addActionListener(this);
+        jb1.addActionListener(this);
 
 
         jp1 = new JPanel();
@@ -71,7 +75,12 @@ public class Customer extends JFrame implements ActionListener {
             System.exit(0);
         }else if (e.getActionCommand() == "门票预定"){
             this.dispose();
-            new BuyTicket();
+            new Ticket();
+        }else if(e.getActionCommand() == "展馆预约"){
+            this.dispose();
+            new Reserve();
+        }else if (e.getActionCommand() == "会展信息查询"){
+            new SelectInformation();
         }
     }
 }

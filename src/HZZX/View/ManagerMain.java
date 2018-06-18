@@ -1,7 +1,7 @@
 package HZZX.View;
 
 import HZZX.manager.Business;
-import HZZX.manager.Information;
+import HZZX.manager.informationManager.Information;
 import HZZX.manager.Place;
 import HZZX.manager.Thing;
 
@@ -16,7 +16,7 @@ public class ManagerMain extends JFrame implements ActionListener {
     JPanel jp1,jp2,jp3,jp4,jp5;
     JLabel jl1;
 
-    ManagerMain(){
+    public ManagerMain(){
         jb1 = new JButton("会展信息管理");
         jb2 = new JButton("展商管理");
         jb3 = new JButton("展馆管理");
