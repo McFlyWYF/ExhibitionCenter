@@ -2,20 +2,12 @@ package HZZX.bean;
 
 public class PlaceInformation {
 
-    private String r_id;
     private String p_id;
-    private String b_id;
-    private String b_name;
-    private String time;
+    private String p_name;
+    private String area;
+    private String address;
+    private String people;
     private String num;
-
-    public String getR_id() {
-        return r_id;
-    }
-
-    public void setR_id(String r_id) {
-        this.r_id = r_id;
-    }
 
     public String getP_id() {
         return p_id;
@@ -25,28 +17,36 @@ public class PlaceInformation {
         this.p_id = p_id;
     }
 
-    public String getB_id() {
-        return b_id;
+    public String getP_name() {
+        return p_name;
     }
 
-    public void setB_id(String b_id) {
-        this.b_id = b_id;
+    public void setP_name(String p_name) {
+        this.p_name = p_name;
     }
 
-    public String getB_name() {
-        return b_name;
+    public String getArea() {
+        return area;
     }
 
-    public void setB_name(String b_name) {
-        this.b_name = b_name;
+    public void setArea(String area) {
+        this.area = area;
     }
 
-    public String getTime() {
-        return time;
+    public String getAddress() {
+        return address;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPeople() {
+        return people;
+    }
+
+    public void setPeople(String people) {
+        this.people = people;
     }
 
     public String getNum() {

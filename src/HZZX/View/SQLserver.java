@@ -148,6 +148,4 @@ public class SQLserver {
             e.printStackTrace();
         }
     }
-
-
 }

@@ -1,6 +1,7 @@
 package HZZX.manager.informationManager;
 
 import HZZX.bean.MeetingInformation;
+import HZZX.manager.informationManager.Information;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -22,14 +23,14 @@ public class InsertInformations extends JFrame implements ActionListener {
     public InsertInformations() {
 
         jl1 = new JLabel(" 展会编号：");
-        jl2 = new JLabel("    展会名称：");
+        jl2 = new JLabel(" 展会名称：");
         jl3 = new JLabel(" 展商编号：");
-        jl4 = new JLabel("    展品编号：");
+        jl4 = new JLabel(" 展品编号：");
         jl5 = new JLabel(" 展品名称：");
-        jl6 = new JLabel("    地址：");
-        jl7 = new JLabel("时间：");
-        jl8 = new JLabel("    类别：");
-        jl9 = new JLabel("门票价格");
+        jl6 = new JLabel(" 地址：");
+        jl7 = new JLabel(" 时间：");
+        jl8 = new JLabel(" 类别：");
+        jl9 = new JLabel(" 门票价格");
 
         jb1 = new JButton("发布");
         jb2 = new JButton("返回");
@@ -94,7 +95,7 @@ public class InsertInformations extends JFrame implements ActionListener {
 //        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(6, 4));
-        this.setBounds(300, 200, 600, 380);
+        this.setBounds(300, 200, 900, 500);
     }
 
 
@@ -138,7 +139,7 @@ public class InsertInformations extends JFrame implements ActionListener {
             }
         }
         if (result == 1){
-            JOptionPane.showMessageDialog(null,"插入数据成功","提示消息",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"发布成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("插入数据成功");
             clear();
         }else if (result == 0) {

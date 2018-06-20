@@ -1,6 +1,5 @@
 package HZZX.customer.placeReserve;
 
-import HZZX.customer.ticket.Ticket;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -21,7 +20,7 @@ public class UpdateReserve extends JFrame implements ActionListener{
 
         public UpdateReserve(){
             jb1 = new JButton("确定");
-            jb2 = new JButton("返回");
+            //jb2 = new JButton("返回");
 
             jp1 = new JPanel();
             jp2 = new JPanel();
@@ -33,14 +32,14 @@ public class UpdateReserve extends JFrame implements ActionListener{
             jt1 = new JTextField(8);
 
             jb1.addActionListener(this);
-            jb2.addActionListener(this);
+            //jb2.addActionListener(this);
 
             jp1.add(jl1);
             jp2.add(jl2);
             jp2.add(jt1);
 
             jp3.add(jb1);
-            jp3.add(jb2);
+            //jp3.add(jb2);
 
             this.add(jp1);
             this.add(jp2);
@@ -76,8 +75,7 @@ public class UpdateReserve extends JFrame implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
             if (e.getActionCommand() == "返回"){
-                dispose();
-                new Ticket();
+
             }else if (e.getActionCommand() == "确定") {
                 if (verify() == 1) {
                     dispose();

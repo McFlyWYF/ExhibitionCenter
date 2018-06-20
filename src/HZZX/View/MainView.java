@@ -3,9 +3,11 @@ package HZZX.View;
 import HZZX.utils.Facade;
 
 import javax.swing.*;
+import javax.swing.plaf.FontUIResource;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
 
 public class MainView extends JFrame implements ActionListener {
@@ -23,11 +25,30 @@ public class MainView extends JFrame implements ActionListener {
     ButtonGroup group;
 
 
-    public static void main(String[] args) {
-        MainView mainView = new MainView();
+        public static void main(String[] args) {
+            InitGloalFont.InitglobalFont(new Font("alias", Font.PLAIN, 22));
+            MainView mainView = new MainView();
     }
 
     public MainView() {
+
+        //加载图片
+        ImageIcon icon=new ImageIcon("image.png");
+//
+//        //将图片放入label中
+        JLabel label=new JLabel(icon);
+//
+//        //设置label的大小
+        label.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+//
+//        //获取窗口的第二层，将label放入
+        this.getLayeredPane().add(label,new Integer(Integer.MIN_VALUE));
+//
+//        //获取frame的顶层容器,并设置为透明
+        JPanel j=(JPanel)this.getContentPane();
+        j.setOpaque(false);
+
+
         //创建组件
         jb1 = new JButton("登录");
         jb2 = new JButton("注册");
@@ -43,8 +64,10 @@ public class MainView extends JFrame implements ActionListener {
         jlb1 = new JLabel("用户名：");
         jlb2 = new JLabel("密    码：");
 
+
         jrb1 = new JRadioButton("管理员");
         jrb2 = new JRadioButton("客户");
+
         group = new ButtonGroup();
         group.add(jrb1);
         group.add(jrb2);
@@ -74,6 +97,14 @@ public class MainView extends JFrame implements ActionListener {
         jp5.add(jrb1);
         jp5.add(jrb2);
 
+        //必须设置为透明的。否则看不到图片
+        jp1.setOpaque(false);
+        jp2.setOpaque(false);
+        jp3.setOpaque(false);
+        jp4.setOpaque(false);
+        jp5.setOpaque(false);
+
+
         this.add(jp4);
         this.add(jp1);
         this.add(jp2);
@@ -81,11 +112,10 @@ public class MainView extends JFrame implements ActionListener {
         this.add(jp3);
 
         this.setVisible(true);
-        //this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(300, 200, 600, 380);
+        this.setBounds(300, 200,800,500);
 
 
     }
@@ -124,7 +154,6 @@ public class MainView extends JFrame implements ActionListener {
     //管理员登录方法
     public void login1() {
 
-        //使用门面模式
         fcd.ConnectSQL();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
 
@@ -138,7 +167,6 @@ public class MainView extends JFrame implements ActionListener {
     //客户登录方法
     public void login2() {
 
-        //使用门面模式
         fcd.ConnectSQL();
         fcd.SQLverify2(jtf.getText(), jpf.getText());
 

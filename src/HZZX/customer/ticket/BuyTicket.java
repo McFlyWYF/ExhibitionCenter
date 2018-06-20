@@ -30,10 +30,10 @@ public class BuyTicket extends JFrame implements ActionListener {
         jl6 = new JLabel(" 售价：");
 
         jb1 = new JButton("购票");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jtf1 = new JTextField(6);
         jtf2 = new JTextField(6);
@@ -68,7 +68,7 @@ public class BuyTicket extends JFrame implements ActionListener {
         jp3.add(jtf6);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         jp6.add(jl7);
 
@@ -143,8 +143,7 @@ public class BuyTicket extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回") {
-            this.dispose();
-            new Customer();
+
         } else if (e.getActionCommand() == "购票") {
             insertinformation();
         }

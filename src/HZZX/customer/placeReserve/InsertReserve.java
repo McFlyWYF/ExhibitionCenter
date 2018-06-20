@@ -1,6 +1,6 @@
 package HZZX.customer.placeReserve;
 
-import HZZX.bean.PlaceInformation;
+import HZZX.bean.PlaceReserveInformation;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -19,6 +19,7 @@ public class InsertReserve extends JFrame implements ActionListener {
     JButton jb1,jb2;
 
     public InsertReserve(){
+
         jt1 = new JTextField(8);
         jt2 = new JTextField(8);
         jt3 = new JTextField(8);
@@ -45,9 +46,9 @@ public class InsertReserve extends JFrame implements ActionListener {
 
 
         jb1 = new JButton("预约");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl1);
 
@@ -67,7 +68,7 @@ public class InsertReserve extends JFrame implements ActionListener {
         jp4.add(jt6);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -99,7 +100,7 @@ public class InsertReserve extends JFrame implements ActionListener {
             con = DatabaseConnection.getConnection();
             String sql = "insert into Reserve values (?,?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
-            PlaceInformation pi = new PlaceInformation();
+            PlaceReserveInformation pi = new PlaceReserveInformation();
 
             pi.setR_id(jt1.getText());
             pi.setP_id(jt2.getText());
@@ -138,16 +139,9 @@ public class InsertReserve extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回"){
-            dispose();
-            new Reserve();
+
         }else if (e.getActionCommand() == "预约"){
             placeReserve();
-        }else if (e.getActionCommand() == "查询"){
-            SelectReserve.selectInformation();
-        }else if (e.getActionCommand() == "修改"){
-            dispose();
-            new UpdateReserve();
         }
     }
-
 }
