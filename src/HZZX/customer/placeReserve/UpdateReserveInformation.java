@@ -20,6 +20,8 @@ public class UpdateReserveInformation extends JFrame implements ActionListener {
     JButton jb1,jb2;
 
     public UpdateReserveInformation(){
+
+
         jt1 = new JTextField(8);
         jt2 = new JTextField(8);
         jt3 = new JTextField(8);

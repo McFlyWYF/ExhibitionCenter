@@ -1,9 +1,9 @@
 package HZZX.View;
 
-import HZZX.manager.Business;
+import HZZX.manager.business.Business;
 import HZZX.manager.informationManager.Information;
-import HZZX.manager.Place;
-import HZZX.manager.Thing;
+import HZZX.manager.place.Place;
+import HZZX.manager.thing.Things;
 
 import javax.swing.*;
 import java.awt.*;
@@ -17,6 +17,23 @@ public class ManagerMain extends JFrame implements ActionListener {
     JLabel jl1;
 
     public ManagerMain(){
+
+        //加载图片
+        ImageIcon icon=new ImageIcon("image.png");
+//
+//        //将图片放入label中
+        JLabel label=new JLabel(icon);
+//
+//        //设置label的大小
+        label.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+//
+//        //获取窗口的第二层，将label放入
+        this.getLayeredPane().add(label,new Integer(Integer.MIN_VALUE));
+//
+//        //获取frame的顶层容器,并设置为透明
+        JPanel j=(JPanel)this.getContentPane();
+        j.setOpaque(false);
+
         jb1 = new JButton("会展信息管理");
         jb2 = new JButton("展商管理");
         jb3 = new JButton("展馆管理");
@@ -57,7 +74,7 @@ public class ManagerMain extends JFrame implements ActionListener {
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(4, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(300, 200, 600, 380);
+        this.setBounds(300, 200, 900, 500);
     }
 
     @Override
@@ -72,7 +89,7 @@ public class ManagerMain extends JFrame implements ActionListener {
             new Business();
         }else if (e.getActionCommand() == "展品管理"){
             this.dispose();
-            new Thing();
+            new Things();
         }else if (e.getActionCommand() == "展馆管理"){
             this.dispose();
             new Place();

@@ -26,6 +26,23 @@ public class RegisterView extends JFrame implements ActionListener {
     JRadioButton jrb1 = null, jrb2 = null;
 
     public RegisterView() {
+
+        //加载图片
+        ImageIcon icon=new ImageIcon("image.png");
+//
+//        //将图片放入label中
+        JLabel label=new JLabel(icon);
+//
+//        //设置label的大小
+        label.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+//
+//        //获取窗口的第二层，将label放入
+        this.getLayeredPane().add(label,new Integer(Integer.MIN_VALUE));
+//
+//        //获取frame的顶层容器,并设置为透明
+        JPanel j=(JPanel)this.getContentPane();
+        j.setOpaque(false);
+
         //初始化组件
         jf = new JFrame();
         jp1 = new JPanel();

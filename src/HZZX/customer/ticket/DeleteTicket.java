@@ -20,7 +20,7 @@ public class DeleteTicket extends JFrame implements ActionListener {
 
     public DeleteTicket(){
         jb1 = new JButton("取消");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -31,7 +31,7 @@ public class DeleteTicket extends JFrame implements ActionListener {
         jl2 = new JLabel("退票系统");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl2);
         jp2.add(jl1);
@@ -86,8 +86,7 @@ public class DeleteTicket extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回"){
-            dispose();
-            new Ticket();
+
         }else if (e.getActionCommand() == "取消"){
             if (verify() == 1) {
                 delete();

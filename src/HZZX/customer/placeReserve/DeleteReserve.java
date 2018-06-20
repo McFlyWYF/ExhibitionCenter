@@ -20,7 +20,7 @@ public class DeleteReserve extends JFrame implements ActionListener {
 
     public DeleteReserve(){
         jb1 = new JButton("取消");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -31,13 +31,13 @@ public class DeleteReserve extends JFrame implements ActionListener {
         jl2 = new JLabel("展馆预约系统");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl2);
         jp2.add(jl1);
         jp2.add(jt1);
         jp3.add(jb1);
-        jp3.add(jb2);
+        //jp3.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -87,8 +87,7 @@ public class DeleteReserve extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回"){
-            dispose();
-            new Reserve();
+
         }else if (e.getActionCommand() == "取消"){
             if (verify() == 1) {
                 delete();
