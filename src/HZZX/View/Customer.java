@@ -24,11 +24,13 @@ public class Customer extends JFrame implements ActionListener {
     JMenuBar jMenuBar;
     JMenu jm1,jm2,jm3,jm4,jm5;
     JMenuItem jmt1,jmt2,jmt3,jmt4,jmt5,jmt6,jmt7,jmt8,jmt9,jmt10,jmt11,jmt12,jmt13,jmt14,jmt15,jmt16;
+    JPanel jp1;
+    JLabel jl1;
 
     public Customer() {
 
         //加载图片
-        ImageIcon icon=new ImageIcon("image4.png");
+        ImageIcon icon=new ImageIcon("image.png");
 
         //将图片放入label中
         JLabel label=new JLabel(icon);
@@ -71,6 +73,12 @@ public class Customer extends JFrame implements ActionListener {
         jmt15 = new JMenuItem("展商查询");
         jmt16 = new JMenuItem("展品查询");
 
+        jp1 = new JPanel();
+        jl1 = new JLabel("欢迎使用会展中心管理系统");
+        Font font = new Font("alias", Font.PLAIN, 28);
+        jl1.setFont(font);
+        jp1.add(jl1,BorderLayout.CENTER);
+
 
         jm1.add(jmt1);
         jm1.add(jmt2);
@@ -99,6 +107,7 @@ public class Customer extends JFrame implements ActionListener {
         setJMenuBar(jMenuBar);
 
         click();
+        this.add(jp1);
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 1));

@@ -28,14 +28,14 @@ public class SelectThings extends JFrame{
         columnNames.add("姓名");
         columnNames.add("展品编号");
         columnNames.add("展品名称");
-        columnNames.add("会时间");
+        columnNames.add("采购时间");
         columnNames.add("售价");
 
 
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select * from Shop");
+            ps = con.prepareStatement("select Sno,Sname,Thing.Tno,Thing.Tname,Stime,Thing.Tprice from Shop,Thing where Shop.Tno = Thing.Tno");
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();

@@ -37,7 +37,7 @@ public class DeleteTicket extends JFrame implements ActionListener {
         jp2.add(jl1);
         jp2.add(jt1);
         jp3.add(jb1);
-        jp3.add(jb2);
+//        jp3.add(jb2);
 
         this.add(jp1);
         this.add(jp2);

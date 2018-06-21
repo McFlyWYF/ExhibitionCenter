@@ -35,7 +35,7 @@ public class SelectReserve extends JFrame{
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select * from Reserve");
+            ps = con.prepareStatement("select RNO,Place.Pno,Bno,Bname,Rtime,Rnum from Reserve,Place where Reserve.Pno = Place.Pno");
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();

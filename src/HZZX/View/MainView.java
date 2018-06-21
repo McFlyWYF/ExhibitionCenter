@@ -23,6 +23,7 @@ public class MainView extends JFrame implements ActionListener {
     JLabel jlb1, jlb2 ,jlb3 = null;
     JPasswordField jpf = null;
     ButtonGroup group;
+    //public int n;
 
 
         public static void main(String[] args) {
@@ -156,6 +157,8 @@ public class MainView extends JFrame implements ActionListener {
 
         fcd.ConnectSQL();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
+
+       // n = JOptionPane.showConfirmDialog(null, "你高兴吗?", "标题",JOptionPane.YES_NO_OPTION);
 
         this.jtf.setText("");
         this.jpf.setText("");

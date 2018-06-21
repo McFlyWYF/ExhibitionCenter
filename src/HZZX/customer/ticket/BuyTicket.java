@@ -27,7 +27,7 @@ public class BuyTicket extends JFrame implements ActionListener {
         jl3 = new JLabel(" 性别：");
         jl4 = new JLabel(" 职业：");
         jl5 = new JLabel(" 会展编号：");
-        jl6 = new JLabel(" 售价：");
+        //jl6 = new JLabel(" 售价：");
 
         jb1 = new JButton("购票");
         //jb2 = new JButton("返回");
@@ -40,7 +40,7 @@ public class BuyTicket extends JFrame implements ActionListener {
         jtf3 = new JTextField(6);
         jtf4 = new JTextField(6);
         jtf5 = new JTextField(6);
-        jtf6 = new JTextField(6);
+        //jtf6 = new JTextField(6);
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -64,8 +64,8 @@ public class BuyTicket extends JFrame implements ActionListener {
 
         jp3.add(jl5);
         jp3.add(jtf5);
-        jp3.add(jl6);
-        jp3.add(jtf6);
+        //jp3.add(jl6);
+        //jp3.add(jtf6);
 
         jp5.add(jb1);
         //jp5.add(jb2);
@@ -91,7 +91,7 @@ public class BuyTicket extends JFrame implements ActionListener {
         int result = 0;
         try {
             con = DatabaseConnection.getConnection();
-            String sql = "insert into Ticket values(?,?,?,?,?,?)";
+            String sql = "insert into Ticket values(?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             TicketInformation mi = new TicketInformation();
 
@@ -100,7 +100,7 @@ public class BuyTicket extends JFrame implements ActionListener {
             mi.setSex(jtf3.getText());
             mi.setWork(jtf4.getText());
             mi.setM_id(jtf5.getText());
-            mi.setPrice(jtf6.getText());
+            //mi.setPrice(jtf6.getText());
 
 
             ps.setString(1,mi.getId());
@@ -108,7 +108,7 @@ public class BuyTicket extends JFrame implements ActionListener {
             ps.setString(3,mi.getSex());
             ps.setString(4,mi.getWork());
             ps.setString(5,mi.getM_id());
-            ps.setString(6,mi.getPrice());
+            //ps.setString(6,mi.getPrice());
 
             result = ps.executeUpdate();
 
@@ -137,7 +137,7 @@ public class BuyTicket extends JFrame implements ActionListener {
         jtf3.setText("");
         jtf4.setText("");
         jtf5.setText("");
-        jtf6.setText("");
+        //jtf6.setText("");
     }
 
     @Override
