@@ -35,7 +35,7 @@ public class SelectTicket extends JFrame{
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select * from Ticket");
+            ps = con.prepareStatement("select Ano,Aname,Asex,Awork,Ticket.Mno,Mprice from Ticket,Meeting where Ticket.Mno = Meeting.Mno");
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();

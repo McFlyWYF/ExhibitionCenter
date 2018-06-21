@@ -18,6 +18,8 @@ public class DeleteReserve extends JFrame implements ActionListener {
     JTextField jt1;
     JLabel jl1,jl2;
 
+    public int n;
+
     public DeleteReserve(){
         jb1 = new JButton("取消");
         //jb2 = new JButton("返回");
@@ -74,6 +76,7 @@ public class DeleteReserve extends JFrame implements ActionListener {
             PreparedStatement ps = con.prepareStatement("delete from Reserve where RNO = ?");
             ps.setString(1,jt1.getText());
             ps.executeUpdate();
+            //n = JOptionPane.showConfirmDialog(null, "确认删除", "标题",JOptionPane.YES_NO_OPTION);//返回的是按钮
             System.out.println("数据删除成功");
             JOptionPane.showMessageDialog(null,"取消成功","提示消息",JOptionPane.WARNING_MESSAGE);
             jt1.setText("");
@@ -92,7 +95,7 @@ public class DeleteReserve extends JFrame implements ActionListener {
             if (verify() == 1) {
                 delete();
             }else {
-                JOptionPane.showMessageDialog(null,"该展馆编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null,"该编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
                 jt1.setText("");
             }
         }
