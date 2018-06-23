@@ -17,6 +17,7 @@ public class Facade {
         s.SQLverify1(a, b);
     }
 
+    //客户登录与否验证
     public void SQLverify2(String a, String b) {
         s.SQLverify2(a, b);
     }

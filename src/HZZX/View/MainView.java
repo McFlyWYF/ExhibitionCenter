@@ -9,6 +9,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Enumeration;
 
+/*
+登录主界面
+ */
 
 public class MainView extends JFrame implements ActionListener {
 

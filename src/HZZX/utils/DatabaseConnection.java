@@ -3,6 +3,9 @@ package HZZX.utils;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
+/*
+将数据库连接封装
+ */
 public class DatabaseConnection {
 
     private static Connection conn = null;

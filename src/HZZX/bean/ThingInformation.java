@@ -1,5 +1,8 @@
 package HZZX.bean;
 
+/*
+展品信息
+ */
 public class ThingInformation {
 
     private String t_id;

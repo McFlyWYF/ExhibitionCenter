@@ -1,5 +1,8 @@
 package HZZX.bean;
 
+/*
+门票预定信息
+ */
 public class TicketInformation {
 
     private String id;

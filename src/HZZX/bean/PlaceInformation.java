@@ -1,5 +1,9 @@
 package HZZX.bean;
 
+
+/*
+展馆信息
+ */
 public class PlaceInformation {
 
     private String p_id;

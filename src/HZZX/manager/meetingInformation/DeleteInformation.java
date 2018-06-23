@@ -1,6 +1,5 @@
-package HZZX.manager.deleteInformation;
+package HZZX.manager.meetingInformation;
 
-import HZZX.manager.informationManager.Information;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
