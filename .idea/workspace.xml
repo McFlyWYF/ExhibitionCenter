@@ -3,93 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="2a18b0ca-2ede-4e3a-92ea-68c9af5b38f2" name="Default" comment="会展信息添加">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/icon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/naruto.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/MainView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/MainView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/RegisterView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/View/RegisterView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/DeleteReserve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/DeleteReserve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/InsertReserve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/InsertReserve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/SelectReserve.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/SelectReserve.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/UpdateReserve.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/placeReserve/UpdateReserveInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/BuyThings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/BuyThings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/DeleteThings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/DeleteThings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/SelectThings.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/SelectThings.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/UpdateShopInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/shopping/UpdateThings.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/BuyTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/BuyTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/DeleteTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/DeleteTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/SelectTicket.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/SelectTicket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/UpdateTicket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/customer/ticket/UpdateTicketInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/business/SelectBusiness.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/business/SelectBusiness.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/place/SelectPlace.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/place/SelectPlace.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/selectInformation/ManagerSelect.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/selectInformation/ManagerSelect.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/selectInformation/Query.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/selectInformation/SelectInformation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/thing/SelectThing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HZZX/HZZX/manager/thing/SelectThing.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HZZX/View/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/View/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/View/InitGloalFont.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HZZX/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/View/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HZZX/View/ManagerMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/View/ManagerMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/View/RegisterView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/View/RegisterView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/DeleteReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/DeleteReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/InsertReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/InsertReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/SelectReserve.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/SelectReserve.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/UpdateReserve.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/placeReserve/UpdateReserveInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/shopping/BuyThings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/shopping/BuyThings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/shopping/DeleteThings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/shopping/DeleteThings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/shopping/SelectThings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/shopping/SelectThings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/shopping/UpdateShopInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/shopping/UpdateThings.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/ticket/BuyTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/ticket/BuyTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/ticket/DeleteTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/ticket/DeleteTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/ticket/SelectTicket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/customer/ticket/SelectTicket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/ticket/UpdateTicket.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/customer/ticket/UpdateTicketInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/Business.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/Business.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/DeleteBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/DeleteBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/InsertBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/InsertBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/SelectBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/SelectBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusinessInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusinessInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/deleteInformation/DeleteInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/deleteInformation/DeleteInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/informationManager/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/informationManager/Information.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/informationManager/InsertInformations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/informationManager/InsertInformations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/DeletePlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/DeletePlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/InsertPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/InsertPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/Place.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/Place.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/SelectPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/SelectPlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlace.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlaceInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlaceInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/selectInformation/ManagerSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/selectInformation/ManagerSelect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/selectInformation/Query.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/selectInformation/SelectInformation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/DeleteThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/DeleteThing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/InsertThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/InsertThing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/SelectThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/SelectThing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/Things.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/Things.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThingInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/View/SQLserver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/View/SQLserver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/BusinessInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/BusinessInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/MeetingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/MeetingInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/PlaceInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/PlaceInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/PlaceReserveInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/PlaceReserveInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/ShopBuyInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/ShopBuyInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/bean/TicketInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/bean/TicketInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/deleteInformation/DeleteInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/DeleteInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/informationManager/Information.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/Information.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/informationManager/InsertInformations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/InsertInformations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/manager/selectInformation/ManagerSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/SelectInformation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/utils/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/utils/DatabaseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/HZZX/utils/Facade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HZZX/utils/Facade.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -131,92 +62,204 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="DeletePlace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/place/DeletePlace.java">
+      <file leaf-file-name="MeetingInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/MeetingInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+            <state relative-caret-position="57">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#325#326#0" expanded="true" />
+                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#424#425#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#530#531#0" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#664#665#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#727#728#0" expanded="true" />
+                <element signature="e#754#755#0" expanded="true" />
+                <element signature="e#794#795#0" expanded="true" />
+                <element signature="e#826#827#0" expanded="true" />
+                <element signature="e#859#860#0" expanded="true" />
+                <element signature="e#888#889#0" expanded="true" />
+                <element signature="e#932#933#0" expanded="true" />
+                <element signature="e#968#969#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+                <element signature="e#1078#1079#0" expanded="true" />
+                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="e#1147#1148#0" expanded="true" />
+                <element signature="e#1174#1175#0" expanded="true" />
+                <element signature="e#1214#1215#0" expanded="true" />
+                <element signature="e#1246#1247#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+                <element signature="e#1304#1305#0" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
+                <element signature="e#1376#1377#0" expanded="true" />
+                <element signature="e#1408#1409#0" expanded="true" />
+                <element signature="e#1436#1437#0" expanded="true" />
+                <element signature="e#1478#1479#0" expanded="true" />
+                <element signature="e#1512#1513#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteThing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/thing/DeleteThing.java">
+      <file leaf-file-name="PlaceInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/PlaceInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="48" column="38" selection-start-line="48" selection-start-column="23" selection-end-line="48" selection-end-column="38" />
+            <state relative-caret-position="76">
+              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+              <folding>
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#274#275#0" expanded="true" />
+                <element signature="e#314#315#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#452#453#0" expanded="true" />
+                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#618#619#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#682#683#0" expanded="true" />
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#766#767#0" expanded="true" />
+                <element signature="e#799#800#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#872#873#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#964#965#0" expanded="true" />
+                <element signature="e#1002#1003#0" expanded="true" />
+                <element signature="e#1032#1033#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InsertThing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/thing/InsertThing.java">
+      <file leaf-file-name="PlaceReserveInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/PlaceReserveInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+            <state relative-caret-position="57">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+              <folding>
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#275#276#0" expanded="true" />
+                <element signature="e#315#316#0" expanded="true" />
+                <element signature="e#347#348#0" expanded="true" />
+                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#405#406#0" expanded="true" />
+                <element signature="e#445#446#0" expanded="true" />
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#508#509#0" expanded="true" />
+                <element signature="e#535#536#0" expanded="true" />
+                <element signature="e#575#576#0" expanded="true" />
+                <element signature="e#607#608#0" expanded="true" />
+                <element signature="e#640#641#0" expanded="true" />
+                <element signature="e#669#670#0" expanded="true" />
+                <element signature="e#713#714#0" expanded="true" />
+                <element signature="e#749#750#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#847#848#0" expanded="true" />
+                <element signature="e#879#880#0" expanded="true" />
+                <element signature="e#909#910#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1003#1004#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdatePlace.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlace.java">
+      <file leaf-file-name="ShopBuyInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/ShopBuyInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+            <state relative-caret-position="57">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdatePlaceInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlaceInformation.java">
+      <file leaf-file-name="ThingInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="82" column="37" selection-start-line="82" selection-start-column="37" selection-end-line="82" selection-end-column="37" />
+            <state relative-caret-position="57">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#245#246#0" expanded="true" />
+                <element signature="e#285#286#0" expanded="true" />
+                <element signature="e#317#318#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#379#380#0" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#459#460#0" expanded="true" />
+                <element signature="e#490#491#0" expanded="true" />
+                <element signature="e#517#518#0" expanded="true" />
+                <element signature="e#557#558#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#725#726#0" expanded="true" />
+                <element signature="e#756#757#0" expanded="true" />
+                <element signature="e#783#784#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#855#856#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateThing.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThing.java">
+      <file leaf-file-name="InsertInformations.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/InsertInformations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="49" column="29" selection-start-line="49" selection-start-column="29" selection-end-line="49" selection-end-column="29" />
+            <state relative-caret-position="19">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateThingInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThingInformation.java">
+      <file leaf-file-name="Information.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/Information.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="77" column="28" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+            <state relative-caret-position="380">
+              <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteBusiness.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/DeleteBusiness.java">
+      <file leaf-file-name="TicketInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/bean/TicketInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="439">
-              <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+            <state relative-caret-position="57">
+              <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateBusiness.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusiness.java">
+      <file leaf-file-name="DeleteInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/DeleteInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="49" column="38" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+            <state relative-caret-position="133">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UpdateBusinessInformation.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusinessInformation.java">
+      <file leaf-file-name="SelectInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/SelectInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="19">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -236,18 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/HZZX/manager/business/BuyThings.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/manager/thing/BuyTicket.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/manager/selectInformation/MeetingId.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/manager/deleteInformation/BusinessId.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/manager/selectInformation/Select.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/manager/selectInformation/SelectInformation.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/utils/FontSet.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/customer/ticket/UpdateTicketInformation.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/activity/CustomerActivity.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/View/SQLserver.java" />
         <option value="$PROJECT_DIR$/src/HZZX/customer/placeReserve/InsertReserve.java" />
         <option value="$PROJECT_DIR$/src/HZZX/customer/placeReserve/DeleteReserve.java" />
         <option value="$PROJECT_DIR$/src/HZZX/customer/placeReserve/UpdateReserve.java" />
@@ -261,13 +292,11 @@
         <option value="$PROJECT_DIR$/src/HZZX/customer/ticket/BuyTicket.java" />
         <option value="$PROJECT_DIR$/src/HZZX/customer/ticket/DeleteTicket.java" />
         <option value="$PROJECT_DIR$/src/HZZX/customer/ticket/SelectTicket.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/View/Customer.java" />
         <option value="$PROJECT_DIR$/src/HZZX/View/RegisterView.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/selectInformation/ManagerSelect.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/place/SelectPlace.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/business/SelectBusiness.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/thing/SelectThing.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/View/MainView.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/business/Business.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/informationManager/Information.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/informationManager/InsertInformations.java" />
@@ -280,13 +309,27 @@
         <option value="$PROJECT_DIR$/src/HZZX/manager/thing/Things.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThing.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/thing/UpdateThingInformation.java" />
-        <option value="$PROJECT_DIR$/src/HZZX/View/ManagerMain.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlaceInformation.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlace.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/place/DeletePlace.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/business/DeleteBusiness.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusiness.java" />
         <option value="$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusinessInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/View/Customer.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/View/MainView.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/View/ManagerMain.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/utils/DatabaseConnection.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/View/SQLserver.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/utils/Facade.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/BusinessInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/MeetingInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/PlaceInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/PlaceReserveInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/ShopBuyInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/bean/TicketInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/SelectInformation.java" />
+        <option value="$PROJECT_DIR$/src/HZZX/manager/meetingInformation/Information.java" />
       </list>
     </option>
   </component>
@@ -332,51 +375,6 @@
               <item name="HZZX" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="business" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="place" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-              <item name="thing" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HZZX" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="HZZX" type="462c0819:PsiDirectoryNode" />
-              <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -450,21 +448,21 @@
         </pattern>
       </extension>
     </configuration>
-    <configuration name="ManagerSelect" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="HZZX.manager.selectInformation.ManagerSelect" />
-      <module name="HZZX" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="HZZX.manager.selectInformation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
     <configuration name="Menu" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Menu" />
       <module name="HZZX" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="SelectInformation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="HZZX.manager.meetingInformation.SelectInformation" />
+      <module name="HZZX" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="HZZX.manager.meetingInformation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
     </configuration>
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test" />
@@ -516,14 +514,14 @@
       <item itemvalue="Application.MainView (1)" />
       <item itemvalue="Application.JInternalFrameDemo" />
       <item itemvalue="Application.Menu" />
-      <item itemvalue="Application.ManagerSelect" />
+      <item itemvalue="Application.SelectInformation" />
       <item itemvalue="Application.Test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainView (1)" />
         <item itemvalue="Application.Test" />
-        <item itemvalue="Application.ManagerSelect" />
+        <item itemvalue="Application.SelectInformation" />
         <item itemvalue="Application.Menu" />
         <item itemvalue="Application.JInternalFrameDemo" />
       </list>
@@ -553,7 +551,7 @@
       <workItem from="1529503042456" duration="202000" />
       <workItem from="1529503376061" duration="610000" />
       <workItem from="1529538998923" duration="4227000" />
-      <workItem from="1529744884435" duration="11529000" />
+      <workItem from="1529744884435" duration="12261000" />
     </task>
     <task id="LOCAL-00001" summary="会展信息添加">
       <created>1529158752599</created>
@@ -566,11 +564,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142622000" />
+    <option name="totallyTimeSpent" value="143354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -582,11 +579,11 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.19738276" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32824427" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19738276" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32824427" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12899786" />
       <window_info anchor="right" id="Database" order="6" weight="0.32942432" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -619,66 +616,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/awt/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="1092" selection-start-line="1092" selection-end-line="1092" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/HZZX/activity/CustomerActivity.java" />
-    <entry file="file://$PROJECT_DIR$/src/HZZX/utils/DatabaseConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://9006f451-233b-45f2-b250-c57d9f9aa12f/database/HZZX/schema/dbo/table/Reserve">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/utils/Facade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image2.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/SQLserver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/InitGloalFont.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/customer/placeReserve/InsertReserve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="80" column="38" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HZZX/customer/placeReserve/UpdateReserve.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -781,17 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/selectInformation/ManagerSelect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-625">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
-          <folding>
-            <element signature="e#577#578#0" expanded="true" />
-            <element signature="e#635#636#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/SelectBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1083">
@@ -799,48 +725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="82" column="10" selection-start-line="82" selection-start-column="10" selection-end-line="82" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/RegisterView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/Business.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="93" column="13" lean-forward="true" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/informationManager/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="49" column="36" lean-forward="true" selection-start-line="49" selection-start-column="36" selection-end-line="49" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/informationManager/InsertInformations.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-473">
-          <caret line="84" column="10" selection-start-line="84" selection-start-column="10" selection-end-line="84" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/deleteInformation/DeleteInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="91" column="7" selection-start-line="91" selection-start-column="7" selection-end-line="91" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -886,20 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/MainView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="139" column="29" selection-start-line="139" selection-start-column="29" selection-end-line="139" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HZZX/View/ManagerMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="102" column="12" selection-start-line="102" selection-start-column="12" selection-end-line="102" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HZZX/manager/place/UpdatePlaceInformation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -917,7 +791,7 @@
     <entry file="file://$PROJECT_DIR$/src/HZZX/manager/place/DeletePlace.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
-          <caret line="46" column="25" lean-forward="true" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
+          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -965,8 +839,263 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HZZX/manager/business/UpdateBusinessInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+        <state relative-caret-position="304">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/InitGloalFont.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="19" column="3" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/MainView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/ManagerMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/RegisterView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/utils/DatabaseConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/View/SQLserver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/utils/Facade.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#159#160#0" expanded="true" />
+            <element signature="e#189#190#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="true" />
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/BusinessInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/MeetingInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#530#531#0" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#664#665#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#754#755#0" expanded="true" />
+            <element signature="e#794#795#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#859#860#0" expanded="true" />
+            <element signature="e#888#889#0" expanded="true" />
+            <element signature="e#932#933#0" expanded="true" />
+            <element signature="e#968#969#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1078#1079#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="e#1147#1148#0" expanded="true" />
+            <element signature="e#1174#1175#0" expanded="true" />
+            <element signature="e#1214#1215#0" expanded="true" />
+            <element signature="e#1246#1247#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1376#1377#0" expanded="true" />
+            <element signature="e#1408#1409#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+            <element signature="e#1512#1513#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/PlaceInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#274#275#0" expanded="true" />
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#452#453#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#618#619#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#682#683#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#766#767#0" expanded="true" />
+            <element signature="e#799#800#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#964#965#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/PlaceReserveInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding>
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+            <element signature="e#405#406#0" expanded="true" />
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#508#509#0" expanded="true" />
+            <element signature="e#535#536#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#607#608#0" expanded="true" />
+            <element signature="e#640#641#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#713#714#0" expanded="true" />
+            <element signature="e#749#750#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/ShopBuyInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/ThingInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#317#318#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#379#380#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#459#460#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+            <element signature="e#517#518#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#756#757#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#855#856#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/bean/TicketInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/DeleteInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/SelectInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/InsertInformations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HZZX/manager/meetingInformation/Information.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="31" column="22" lean-forward="true" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
         </state>
       </provider>
     </entry>

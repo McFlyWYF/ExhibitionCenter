@@ -1,9 +1,10 @@
-package HZZX.manager.informationManager;
+package HZZX.manager.meetingInformation;
 
 import HZZX.View.ManagerMain;
 import HZZX.customer.shopping.SelectThings;
-import HZZX.manager.deleteInformation.DeleteInformation;
-import HZZX.manager.selectInformation.ManagerSelect;
+import HZZX.manager.meetingInformation.DeleteInformation;
+import HZZX.manager.meetingInformation.InsertInformations;
+import HZZX.manager.meetingInformation.SelectInformation;
 import HZZX.customer.ticket.SelectTicket;
 
 import javax.swing.*;
@@ -107,7 +108,7 @@ public class Information extends JFrame implements ActionListener {
             dispose();
             new ManagerMain();
         } else if (e.getActionCommand() == "查询会展信息") {
-            new ManagerSelect();
+            new SelectInformation();
         } else if (e.getActionCommand() == "发布会展信息") {
             //this.dispose();
             new InsertInformations();

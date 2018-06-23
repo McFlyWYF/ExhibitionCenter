@@ -1,5 +1,8 @@
 package HZZX.bean;
 
+/*
+展品采购信息
+ */
 public class ShopBuyInformation {
 
     private String s_id;

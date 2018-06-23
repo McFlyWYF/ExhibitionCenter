@@ -1,4 +1,4 @@
-package HZZX.manager.selectInformation;
+package HZZX.manager.meetingInformation;
 
 import HZZX.utils.DatabaseConnection;
 
@@ -10,7 +10,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-public class ManagerSelect extends JFrame {
+public class SelectInformation extends JFrame {
 
     JTable jt;
     JScrollPane js = new JScrollPane();
@@ -20,10 +20,10 @@ public class ManagerSelect extends JFrame {
     ResultSet rs;
 
     public static void main(String[] args) {
-        ManagerSelect select = new ManagerSelect();
+        SelectInformation select = new SelectInformation();
     }
 
-    public ManagerSelect(){
+    public SelectInformation(){
 
         columnNames = new Vector();
         rowData = new Vector();

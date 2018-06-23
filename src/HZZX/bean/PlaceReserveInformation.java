@@ -1,5 +1,8 @@
 package HZZX.bean;
 
+/*
+展馆预约信息
+ */
 public class PlaceReserveInformation {
 
     private String r_id;

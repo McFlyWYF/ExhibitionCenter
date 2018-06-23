@@ -1,5 +1,8 @@
 package HZZX.bean;
 
+/*
+展会信息
+ */
 public class MeetingInformation {
 
     private String m_id;

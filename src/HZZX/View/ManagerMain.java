@@ -1,7 +1,7 @@
 package HZZX.View;
 
 import HZZX.manager.business.Business;
-import HZZX.manager.informationManager.Information;
+import HZZX.manager.meetingInformation.Information;
 import HZZX.manager.place.Place;
 import HZZX.manager.thing.Things;
 
@@ -9,6 +9,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+/*
+管理员主界面
+ */
 
 public class ManagerMain extends JFrame implements ActionListener {
 

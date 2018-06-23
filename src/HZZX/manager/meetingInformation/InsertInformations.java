@@ -1,7 +1,6 @@
-package HZZX.manager.informationManager;
+package HZZX.manager.meetingInformation;
 
 import HZZX.bean.MeetingInformation;
-import HZZX.manager.informationManager.Information;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;

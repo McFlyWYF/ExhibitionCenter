@@ -9,12 +9,16 @@ import HZZX.customer.ticket.DeleteTicket;
 import HZZX.customer.ticket.SelectTicket;
 import HZZX.manager.business.SelectBusiness;
 import HZZX.manager.place.SelectPlace;
-import HZZX.manager.selectInformation.ManagerSelect;
+import HZZX.manager.meetingInformation.SelectInformation;
 import HZZX.manager.thing.SelectThing;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+/*
+客户主界面
+ */
 
 public class Customer extends JFrame implements ActionListener {
 
@@ -181,7 +185,7 @@ public class Customer extends JFrame implements ActionListener {
         jmt13.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ManagerSelect();
+                new SelectInformation();
             }
         });
 

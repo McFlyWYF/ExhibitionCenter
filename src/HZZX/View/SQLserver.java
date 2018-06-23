@@ -55,7 +55,6 @@ public class SQLserver {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     //注册用户的方法
