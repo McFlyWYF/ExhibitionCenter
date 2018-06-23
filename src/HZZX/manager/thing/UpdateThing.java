@@ -20,7 +20,7 @@ public class UpdateThing extends JFrame implements ActionListener {
 
     public UpdateThing(){
         jb1 = new JButton("确定");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -32,14 +32,14 @@ public class UpdateThing extends JFrame implements ActionListener {
         jt1 = new JTextField(8);
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl1);
         jp2.add(jl2);
         jp2.add(jt1);
 
         jp3.add(jb1);
-        jp3.add(jb2);
+        //jp3.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -47,7 +47,7 @@ public class UpdateThing extends JFrame implements ActionListener {
 
         this.setVisible(true);
         this.setLayout(new GridLayout(4,3));
-        this.setBounds(300,300,600,400);
+        this.setBounds(720,320,600,400);
         this.setTitle("会展中心管理系统");
     }
 
@@ -74,10 +74,7 @@ public class UpdateThing extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回"){
-            dispose();
-            new Things();
-        }else if (e.getActionCommand() == "确定") {
+        if (e.getActionCommand() == "确定") {
             if (verify() == 1) {
                 dispose();
                 new UpdateThingInformation();

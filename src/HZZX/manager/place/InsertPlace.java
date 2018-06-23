@@ -23,10 +23,10 @@ public class InsertPlace extends JFrame implements ActionListener {
     public InsertPlace() {
 
         jb1 = new JButton("开放展馆");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -72,7 +72,7 @@ public class InsertPlace extends JFrame implements ActionListener {
         jp4.add(jt6);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -84,7 +84,7 @@ public class InsertPlace extends JFrame implements ActionListener {
 //        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 4));
-        this.setBounds(300, 200, 900, 500);
+        this.setBounds(660, 280, 700, 500);
     }
 
     public void clear() {
@@ -164,9 +164,6 @@ public class InsertPlace extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "开放展馆") {
             insert();
-        }else if (e.getActionCommand() == "返回"){
-            dispose();
-            new Place();
         }
     }
 }

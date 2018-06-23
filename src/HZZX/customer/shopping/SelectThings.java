@@ -1,6 +1,5 @@
 package HZZX.customer.shopping;
 
-import HZZX.manager.selectInformation.Query;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -66,7 +65,7 @@ public class SelectThings extends JFrame{
         this.setTitle("查询");
         this.setLayout(new GridLayout(2,2));
 
-        this.setSize(850,500);
+        this.setBounds(644,300,850,500);
         this.setVisible(true);
         this.setResizable(false);
     }

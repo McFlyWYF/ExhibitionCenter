@@ -12,69 +12,90 @@ import java.util.Enumeration;
 
 public class MainView extends JFrame implements ActionListener {
 
+    private ButtonGroup group;
     //门面模式对象
     Facade fcd = new Facade();
 
     //定义登录界面的组件
     JButton jb1, jb2, jb3 = null;
     JRadioButton jrb1, jrb2 = null;
-    JPanel jp1, jp2, jp3 ,jp4 ,jp5= null;
+    JPanel jp1, jp2, jp3, jp4, jp5 = null;
     JTextField jtf = null;
-    JLabel jlb1, jlb2 ,jlb3 = null;
+    JLabel jlb1, jlb2, jlb3 = null;
     JPasswordField jpf = null;
-    ButtonGroup group;
-    //public int n;
 
 
-        public static void main(String[] args) {
-            InitGloalFont.InitglobalFont(new Font("alias", Font.PLAIN, 22));
-            MainView mainView = new MainView();
+
+    public static void main(String[] args) {
+        //InitGloalFont.InitglobalFont(new Font("alias", Font.PLAIN, 22));
+        MainView mainView = new MainView();
     }
 
     public MainView() {
 
+        Font font = new Font("alias", Font.PLAIN, 22);
+
         //加载图片
-        ImageIcon icon=new ImageIcon("image.png");
+        ImageIcon icon = new ImageIcon("image5.png");
 //
 //        //将图片放入label中
-        JLabel label=new JLabel(icon);
+        JLabel label = new JLabel(icon);
 //
 //        //设置label的大小
-        label.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+        label.setBounds(0, 0, icon.getIconWidth(), icon.getIconHeight());
 //
 //        //获取窗口的第二层，将label放入
-        this.getLayeredPane().add(label,new Integer(Integer.MIN_VALUE));
+        this.getLayeredPane().add(label, new Integer(Integer.MIN_VALUE));
 //
 //        //获取frame的顶层容器,并设置为透明
-        JPanel j=(JPanel)this.getContentPane();
+        JPanel j = (JPanel) this.getContentPane();
         j.setOpaque(false);
 
 
         //创建组件
         jb1 = new JButton("登录");
+        jb1.setFont(font);
+        //jb1.setBounds(150,230,70,22);
+        jb1.setBackground(Color.WHITE);
         jb2 = new JButton("注册");
+        jb2.setFont(font);
+        //jb1.setBounds(150,230,70,22);
+        jb2.setBackground(Color.white);
         jb3 = new JButton("退出");
+        jb3.setFont(font);
+        //jb1.setBounds(150,230,70,22);
+        jb3.setBackground(Color.white);
 
         //设置监听
         jb1.addActionListener(this);
         jb2.addActionListener(this);
         jb3.addActionListener(this);
 
-
         jlb3 = new JLabel("欢迎使用会展中心管理系统");
-        jlb1 = new JLabel("用户名：");
-        jlb2 = new JLabel("密    码：");
-
 
         jrb1 = new JRadioButton("管理员");
+        jrb1.setFont(font);
         jrb2 = new JRadioButton("客户");
+        jrb2.setFont(font);
 
         group = new ButtonGroup();
         group.add(jrb1);
         group.add(jrb2);
 
+        jlb1 = new JLabel("用户名：");
+        //jlb1.setBounds(100,120,200,30);
         jtf = new JTextField(10);
+        //jtf.setBounds(150,120,150,30);
+        jlb1.setFont(font);
+        jtf.setFont(font);
+
+        jlb2 = new JLabel("密    码：");
+        //jlb2.setBounds(100,180,200,30);
+        jlb2.setFont(font);
         jpf = new JPasswordField(10);
+        //jpf.setBounds(150,180,150,30);
+        jpf.setFont(font);
+
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -116,9 +137,7 @@ public class MainView extends JFrame implements ActionListener {
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(300, 200,800,500);
-
-
+        this.setBounds(600,280,icon.getIconWidth(),icon.getIconHeight());
     }
 
     @Override
@@ -135,7 +154,7 @@ public class MainView extends JFrame implements ActionListener {
                 //调用登录方法
                 if (jrb1.isSelected()) {
                     login1();
-                }else if (jrb2.isSelected()){
+                } else if (jrb2.isSelected()) {
                     login2();
                 }
             }
@@ -158,7 +177,7 @@ public class MainView extends JFrame implements ActionListener {
         fcd.ConnectSQL();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
 
-       // n = JOptionPane.showConfirmDialog(null, "你高兴吗?", "标题",JOptionPane.YES_NO_OPTION);
+        // n = JOptionPane.showConfirmDialog(null, "你高兴吗?", "标题",JOptionPane.YES_NO_OPTION);
 
         this.jtf.setText("");
         this.jpf.setText("");

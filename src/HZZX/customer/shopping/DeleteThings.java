@@ -44,7 +44,7 @@ public class DeleteThings extends JFrame implements ActionListener {
         this.add(jp3);
 
         this.setVisible(true);
-        this.setBounds(200,200,600,400);
+        this.setBounds(700,300,600,400);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(6,4));
     }

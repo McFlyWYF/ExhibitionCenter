@@ -30,10 +30,10 @@ public class InsertThing extends JFrame implements ActionListener {
         jl5 = new JLabel(" 规格：");
 
         jb1 = new JButton("添加");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jtf1 = new JTextField(6);
         jtf2 = new JTextField(6);
@@ -66,7 +66,7 @@ public class InsertThing extends JFrame implements ActionListener {
         jp3.add(jtf5);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         jp6.add(jl7);
 
@@ -79,7 +79,7 @@ public class InsertThing extends JFrame implements ActionListener {
         this.setVisible(true);;
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 4));
-        this.setBounds(300, 200, 900, 500);
+        this.setBounds(670, 300, 700, 500);
     }
 
 
@@ -135,10 +135,7 @@ public class InsertThing extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回") {
-            dispose();
-            new Things();
-        } else if (e.getActionCommand() == "添加") {
+       if (e.getActionCommand() == "添加") {
             insertinformation();
         }
     }

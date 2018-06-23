@@ -50,9 +50,9 @@ public class InsertBusiness extends JFrame implements ActionListener {
 
 
         jb1 = new JButton("添加");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl1);
 
@@ -72,7 +72,7 @@ public class InsertBusiness extends JFrame implements ActionListener {
         jp4.add(jt6);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -82,7 +82,7 @@ public class InsertBusiness extends JFrame implements ActionListener {
 
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setBounds(200,200,900,500);
+        this.setBounds(660,300,700,450);
         this.setLayout(new GridLayout(6,4));
     }
 
@@ -165,10 +165,7 @@ public class InsertBusiness extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回"){
-            dispose();
-            new Business();
-        }else if (e.getActionCommand() == "添加") {
+        if (e.getActionCommand() == "添加") {
             if (verify1() == 1) {
                 buythings();
             }else {

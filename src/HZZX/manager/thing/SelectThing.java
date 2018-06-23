@@ -1,6 +1,5 @@
 package HZZX.manager.thing;
 
-import HZZX.manager.selectInformation.Query;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -61,9 +60,9 @@ public class SelectThing extends JFrame{
 
         this.add(js);
         this.setTitle("查询");
-        this.setLayout(new GridLayout(2,2));
+        this.setLayout(new GridLayout(1,2));
 
-        this.setSize(850,500);
+        this.setBounds(630,300,850,500);
         this.setVisible(true);
         //this.setResizable(false);
     }

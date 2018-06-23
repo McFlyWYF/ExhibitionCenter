@@ -4,18 +4,15 @@ import HZZX.customer.placeReserve.*;
 import HZZX.customer.shopping.BuyThings;
 import HZZX.customer.shopping.DeleteThings;
 import HZZX.customer.shopping.SelectThings;
-import HZZX.customer.shopping.UpdateThings;
 import HZZX.customer.ticket.BuyTicket;
 import HZZX.customer.ticket.DeleteTicket;
 import HZZX.customer.ticket.SelectTicket;
-import HZZX.customer.ticket.UpdateTicket;
 import HZZX.manager.business.SelectBusiness;
 import HZZX.manager.place.SelectPlace;
 import HZZX.manager.selectInformation.ManagerSelect;
 import HZZX.manager.thing.SelectThing;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -30,7 +27,7 @@ public class Customer extends JFrame implements ActionListener {
     public Customer() {
 
         //加载图片
-        ImageIcon icon=new ImageIcon("image.png");
+        ImageIcon icon=new ImageIcon("image1.png");
 
         //将图片放入label中
         JLabel label=new JLabel(icon);
@@ -56,44 +53,44 @@ public class Customer extends JFrame implements ActionListener {
         jmt5 = new JMenuItem("预定门票");
         jmt6 = new JMenuItem("查询门票");
         jmt7 = new JMenuItem("取消订单");
-        jmt8 = new JMenuItem("修改门票信息");
+        //jmt8 = new JMenuItem("修改门票信息");
 
         jmt1 = new JMenuItem("预约展馆");
         jmt2 = new JMenuItem("查询预约信息");
         jmt3 = new JMenuItem("取消预约");
-        jmt4 = new JMenuItem("修改预约信息");
+        //jmt4 = new JMenuItem("修改预约信息");
 
         jmt9 = new JMenuItem("展品采购");
         jmt10 = new JMenuItem("查询采购信息");
         jmt11 = new JMenuItem("取消订单");
-        jmt12 = new JMenuItem("修改订单信息");
+        //jmt12 = new JMenuItem("修改订单信息");
 
         jmt13  =new JMenuItem("会展信息查询");
         jmt14 = new JMenuItem("展馆查询");
         jmt15 = new JMenuItem("展商查询");
         jmt16 = new JMenuItem("展品查询");
 
-        jp1 = new JPanel();
-        jl1 = new JLabel("欢迎使用会展中心管理系统");
-        Font font = new Font("alias", Font.PLAIN, 28);
-        jl1.setFont(font);
-        jp1.add(jl1,BorderLayout.CENTER);
+        //jp1 = new JPanel();
+        //jl1 = new JLabel("欢迎使用会展中心管理系统");
+        //Font font = new Font("alias", Font.PLAIN, 28);
+        //jl1.setFont(font);
+        //jp1.add(jl1,BorderLayout.CENTER);
 
 
         jm1.add(jmt1);
         jm1.add(jmt2);
         jm1.add(jmt3);
-        jm1.add(jmt4);
+        //jm1.add(jmt4);
 
         jm2.add(jmt5);
         jm2.add(jmt6);
         jm2.add(jmt7);
-        jm2.add(jmt8);
+        //jm2.add(jmt8);
 
         jm3.add(jmt9);
         jm3.add(jmt10);
         jm3.add(jmt11);
-        jm3.add(jmt12);
+        //jm3.add(jmt12);
 
         jm4.add(jmt13);
         jm4.add(jmt14);
@@ -107,13 +104,13 @@ public class Customer extends JFrame implements ActionListener {
         setJMenuBar(jMenuBar);
 
         click();
-        this.add(jp1);
+        //this.add(jp1);
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setLayout(new GridLayout(5, 1));
+        this.setLayout(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(300, 200, 800, 500);
-        //this.setBounds(200,200,icon.getIconWidth(),icon.getIconHeight());
+        //this.setBounds(300, 200, 800, 500);
+        this.setBounds(550,240,icon.getIconWidth(),590);
     }
 
     public void click(){
@@ -138,12 +135,6 @@ public class Customer extends JFrame implements ActionListener {
             }
         });
 
-        jmt4.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new UpdateReserve();
-            }
-        });
 
         jmt5.addActionListener(new ActionListener() {
             @Override
@@ -166,13 +157,6 @@ public class Customer extends JFrame implements ActionListener {
             }
         });
 
-        jmt8.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new UpdateTicket();
-            }
-        });
-
         jmt9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -191,13 +175,6 @@ public class Customer extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 new DeleteThings();
-            }
-        });
-
-        jmt12.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new UpdateThings();
             }
         });
 

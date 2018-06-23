@@ -82,7 +82,7 @@ public class BuyTicket extends JFrame implements ActionListener {
 //        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(5, 4));
-        this.setBounds(300, 200, 600, 380);
+        this.setBounds(700,300,600,400);
     }
 
 
