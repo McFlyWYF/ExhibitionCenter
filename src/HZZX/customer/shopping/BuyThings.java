@@ -81,7 +81,7 @@ public class BuyThings extends JFrame implements ActionListener {
 
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setBounds(200,200,600,400);
+        this.setBounds(700,300,600,400);
         this.setLayout(new GridLayout(6,4));
     }
 
@@ -161,27 +161,6 @@ public class BuyThings extends JFrame implements ActionListener {
         }
         return result;
     }
-
-//    public int verify(){
-//        Connection con = null;
-//        ResultSet rs;
-//        int result = 0;
-//        try {
-//            con = DatabaseConnection.getConnection();
-//            PreparedStatement ps = con.prepareStatement("select * from Meeting,Shop where Meeting.Tno = Shop.Tno and Shop.Tno = ?");
-//            //ps.setString(1,jt6.getText());
-//            ps.setString(1,jt3.getText());
-//            rs = ps.executeQuery();
-//            if (rs.next()){
-//                result = 1;
-//            }else {
-//                JOptionPane.showMessageDialog(null,"该数据不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
-//            }
-//        }catch (SQLException e){
-//            e.printStackTrace();
-//        }
-//        return result;
-//    }
 
     @Override
     public void actionPerformed(ActionEvent e) {

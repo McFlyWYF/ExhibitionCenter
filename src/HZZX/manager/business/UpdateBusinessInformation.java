@@ -80,7 +80,7 @@ public class UpdateBusinessInformation extends JFrame implements ActionListener 
 
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setBounds(200,200,900,500);
+        this.setBounds(720,320,600,400);
         this.setLayout(new GridLayout(6,4));
     }
 

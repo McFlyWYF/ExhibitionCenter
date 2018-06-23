@@ -19,10 +19,6 @@ public class ManagerSelect extends JFrame {
     Connection con = null;
     ResultSet rs;
 
-    JComboBox jc;
-    JLabel jl1,jl2,jl3;
-    JPanel jp1,jp2;
-
     public static void main(String[] args) {
         ManagerSelect select = new ManagerSelect();
     }
@@ -79,7 +75,7 @@ public class ManagerSelect extends JFrame {
         this.setTitle("查询");
         this.setLayout(new GridLayout(1,2));
 
-        this.setSize(1200,600);
+        this.setBounds(450,300,1200,600);
         this.setVisible(true);
         //this.setResizable(false);
     }

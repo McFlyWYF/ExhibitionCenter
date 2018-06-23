@@ -33,10 +33,10 @@ public class InsertInformations extends JFrame implements ActionListener {
         jl9 = new JLabel(" 门票价格");
 
         jb1 = new JButton("发布");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jtf1 = new JTextField(6);
         jtf2 = new JTextField(6);
@@ -82,7 +82,7 @@ public class InsertInformations extends JFrame implements ActionListener {
         jp6.add(jtf9);
 
         jp5.add(jb1);
-        jp5.add(jb2);
+        //jp5.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -95,7 +95,7 @@ public class InsertInformations extends JFrame implements ActionListener {
 //        this.setResizable(false);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(6, 4));
-        this.setBounds(300, 200, 900, 500);
+        this.setBounds(700, 300, 752,471);
     }
 
 
@@ -162,10 +162,7 @@ public class InsertInformations extends JFrame implements ActionListener {
     }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回") {
-            this.dispose();
-            new Information();
-        } else if (e.getActionCommand() == "发布") {
+        if (e.getActionCommand() == "发布") {
             insertinformation();
         }
     }

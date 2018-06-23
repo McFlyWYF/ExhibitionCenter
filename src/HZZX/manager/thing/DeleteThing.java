@@ -22,7 +22,7 @@ public class DeleteThing extends JFrame implements ActionListener {
 
     public DeleteThing(){
         jb1 = new JButton("取消");
-        jb2 = new JButton("返回");
+        //jb2 = new JButton("返回");
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -33,20 +33,20 @@ public class DeleteThing extends JFrame implements ActionListener {
         jl2 = new JLabel("展品系统");
 
         jb1.addActionListener(this);
-        jb2.addActionListener(this);
+        //jb2.addActionListener(this);
 
         jp1.add(jl2);
         jp2.add(jl1);
         jp2.add(jt1);
         jp3.add(jb1);
-        jp3.add(jb2);
+        //jp3.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
         this.add(jp3);
 
         this.setVisible(true);
-        this.setBounds(200,200,600,400);
+        this.setBounds(720,320,600,400);
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(6,4));
     }
@@ -88,10 +88,7 @@ public class DeleteThing extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回"){
-            dispose();
-            new Things();
-        }else if (e.getActionCommand() == "取消"){
+       if (e.getActionCommand() == "取消"){
             if (verify() == 1) {
                 delete();
             }else {

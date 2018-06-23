@@ -80,7 +80,7 @@ public class UpdatePlaceInformation extends JFrame implements ActionListener {
 
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setBounds(200,200,900,500);
+        this.setBounds(200,200,640,450);
         this.setLayout(new GridLayout(6,4));
     }
 

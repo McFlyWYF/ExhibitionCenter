@@ -18,8 +18,12 @@ public class ManagerMain extends JFrame implements ActionListener {
 
     public ManagerMain(){
 
+        Font font = new Font("alias", Font.PLAIN, 22);
+        Font font1 = new Font("alias", Font.PLAIN, 30);
+
+
         //加载图片
-        ImageIcon icon=new ImageIcon("image.png");
+        ImageIcon icon=new ImageIcon("image6.png");
 //
 //        //将图片放入label中
         JLabel label=new JLabel(icon);
@@ -35,12 +39,23 @@ public class ManagerMain extends JFrame implements ActionListener {
         j.setOpaque(false);
 
         jb1 = new JButton("会展信息管理");
+        jb1.setBackground(Color.WHITE);
+        jb1.setFont(font);
         jb2 = new JButton("展商管理");
+        jb2.setBackground(Color.WHITE);
+        jb2.setFont(font);
         jb3 = new JButton("展馆管理");
+        jb3.setBackground(Color.WHITE);
+        jb3.setFont(font);
         jb4 = new JButton("展品管理");
+        jb4.setBackground(Color.WHITE);
+        jb4.setFont(font);
         jb5 = new JButton("退出");
+        jb5.setBackground(Color.WHITE);
+        jb5.setFont(font);
 
         jl1 = new JLabel("管理员主菜单");
+        jl1.setFont(font1);
 
         jb1.addActionListener(this);
         jb2.addActionListener(this);
@@ -60,10 +75,13 @@ public class ManagerMain extends JFrame implements ActionListener {
         jp1.add(jb2);
         jp2.add(jb3);
         jp2.add(jb4);
-
         jp4.add(jb5);
-
         jp3.add(jl1);
+
+        jp1.setOpaque(false);
+        jp2.setOpaque(false);
+        jp3.setOpaque(false);
+        jp4.setOpaque(false);
 
         this.add(jp3);
         this.add(jp1);
@@ -74,7 +92,7 @@ public class ManagerMain extends JFrame implements ActionListener {
         this.setTitle("会展中心管理系统");
         this.setLayout(new GridLayout(4, 1));
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setBounds(300, 200, 900, 500);
+        this.setBounds(530, 200, icon.getIconWidth(), icon.getIconHeight());
     }
 
     @Override
