@@ -29,7 +29,7 @@
     </database>
     <schema id="9" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-06-18.19:27:33.043</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-06-28.03:27:47.997</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -77,7 +77,7 @@
     <table id="23" parent="9" name="Meeting">
       <ObjectId>1909581841</ObjectId>
       <CreatedTimestamp>2018-06-18.19:26:20.810</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-18.19:26:20.810</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-06-28.03:27:47.747</ModifiedTimestamp>
     </table>
     <table id="24" parent="9" name="Operator">
       <ObjectId>1461580245</ObjectId>
@@ -95,9 +95,9 @@
       <ModifiedTimestamp>2018-06-18.18:45:09.257</ModifiedTimestamp>
     </table>
     <table id="27" parent="9" name="Shop">
-      <ObjectId>1845581613</ObjectId>
-      <CreatedTimestamp>2018-06-18.18:44:19.290</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-18.18:44:19.290</ModifiedTimestamp>
+      <ObjectId>98099390</ObjectId>
+      <CreatedTimestamp>2018-06-21.17:01:35.520</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-21.17:01:35.520</ModifiedTimestamp>
     </table>
     <table id="28" parent="9" name="Thing">
       <ObjectId>997578592</ObjectId>
@@ -105,9 +105,9 @@
       <ModifiedTimestamp>2018-06-18.18:44:06.393</ModifiedTimestamp>
     </table>
     <table id="29" parent="9" name="Ticket">
-      <ObjectId>1141579105</ObjectId>
-      <CreatedTimestamp>2018-06-15.16:52:19.917</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-15.16:52:19.917</ModifiedTimestamp>
+      <ObjectId>18099105</ObjectId>
+      <CreatedTimestamp>2018-06-21.16:36:25.620</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-21.16:36:25.620</ModifiedTimestamp>
     </table>
     <column id="30" parent="22" name="Bno">
       <Position>1</Position>
@@ -183,35 +183,27 @@
       <Position>4</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="44" parent="23" name="Tname">
-      <Position>5</Position>
-      <DataType>char(20 char)|0s</DataType>
-    </column>
-    <column id="45" parent="23" name="Padd">
+    <column id="44" parent="23" name="Pno">
       <Position>6</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="46" parent="23" name="Mtime">
+    <column id="45" parent="23" name="Mtime">
       <Position>7</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="47" parent="23" name="Tkind">
-      <Position>8</Position>
-      <DataType>char(10 char)|0s</DataType>
-    </column>
-    <column id="48" parent="23" name="Mprice">
+    <column id="46" parent="23" name="Mprice">
       <Position>9</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="49" parent="23" name="PK__Meeting__C797C039529CA63C">
+    <index id="47" parent="23" name="PK__Meeting__C797C039529CA63C">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Mno</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="50" parent="23" name="PK__Meeting__C797C039529CA63C">
+    <key id="48" parent="23" name="PK__Meeting__C797C039529CA63C">
       <ObjectId>1925581898</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-06-18.19:26:21.073</CreatedTimestamp>
@@ -220,24 +212,24 @@
       <UnderlyingIndexName>PK__Meeting__C797C039529CA63C</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="51" parent="24" name="Sacc">
+    <column id="49" parent="24" name="Sacc">
       <Position>1</Position>
       <DataType>char(20 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="24" name="Spwd">
+    <column id="50" parent="24" name="Spwd">
       <Position>2</Position>
       <DataType>char(20 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="53" parent="24" name="PK__Operator__A1507BD1C00C4A85">
+    <index id="51" parent="24" name="PK__Operator__A1507BD1C00C4A85">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Sacc</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="54" parent="24" name="PK__Operator__A1507BD1C00C4A85">
+    <key id="52" parent="24" name="PK__Operator__A1507BD1C00C4A85">
       <ObjectId>1477580302</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-06-16.00:18:06.387</CreatedTimestamp>
@@ -246,39 +238,39 @@
       <UnderlyingIndexName>PK__Operator__A1507BD1C00C4A85</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="55" parent="25" name="Pno">
+    <column id="53" parent="25" name="Pno">
       <Position>1</Position>
       <DataType>char(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="56" parent="25" name="Pname">
+    <column id="54" parent="25" name="Pname">
       <Position>2</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="57" parent="25" name="Parea">
+    <column id="55" parent="25" name="Parea">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="58" parent="25" name="Padd">
+    <column id="56" parent="25" name="Padd">
       <Position>4</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="59" parent="25" name="Ppeo">
+    <column id="57" parent="25" name="Ppeo">
       <Position>5</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="60" parent="25" name="Pnum">
+    <column id="58" parent="25" name="Pnum">
       <Position>6</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="61" parent="25" name="PK__Place__C570416715A794F4">
+    <index id="59" parent="25" name="PK__Place__C570416715A794F4">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Pno</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="62" parent="25" name="PK__Place__C570416715A794F4">
+    <key id="60" parent="25" name="PK__Place__C570416715A794F4">
       <ObjectId>1045578763</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-06-15.16:44:16.460</CreatedTimestamp>
@@ -287,41 +279,41 @@
       <UnderlyingIndexName>PK__Place__C570416715A794F4</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="63" parent="26" name="RNO">
+    <column id="61" parent="26" name="RNO">
       <Position>1</Position>
       <DataType>char(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="64" parent="26" name="Pno">
+    <column id="62" parent="26" name="Pno">
       <Position>2</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="65" parent="26" name="Bno">
+    <column id="63" parent="26" name="Bno">
       <Position>3</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="66" parent="26" name="Bname">
+    <column id="64" parent="26" name="Bname">
       <Position>4</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="67" parent="26" name="Rtime">
+    <column id="65" parent="26" name="Rtime">
       <Position>5</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="68" parent="26" name="Rnum">
+    <column id="66" parent="26" name="Rnum">
       <Position>6</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="69" parent="26" name="PK__Reserve__CAFF695DA3F7D418">
+    <index id="67" parent="26" name="PK__Reserve__CAFF695DA3F7D418">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>RNO</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="70" parent="26" name="PK__Reserve__CAFF695DA3F7D418">
+    <key id="68" parent="26" name="PK__Reserve__CAFF695DA3F7D418">
       <ObjectId>1893581784</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-06-18.18:45:09.410</CreatedTimestamp>
@@ -330,76 +322,68 @@
       <UnderlyingIndexName>PK__Reserve__CAFF695DA3F7D418</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="71" parent="27" name="Sno">
+    <column id="69" parent="27" name="Sno">
       <Position>1</Position>
       <DataType>char(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="72" parent="27" name="Sname">
+    <column id="70" parent="27" name="Sname">
       <Position>2</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="73" parent="27" name="Tno">
+    <column id="71" parent="27" name="Tno">
       <Position>3</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="74" parent="27" name="Tname">
+    <column id="72" parent="27" name="Stime">
       <Position>4</Position>
-      <DataType>char(20 char)|0s</DataType>
-    </column>
-    <column id="75" parent="27" name="Stime">
-      <Position>5</Position>
       <DataType>date|0s</DataType>
     </column>
-    <column id="76" parent="27" name="Sprice">
-      <Position>6</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="77" parent="27" name="PK__Shop__CA1FE464F29D7847">
+    <index id="73" parent="27" name="PK__Shop__CA1FE46480DF003A">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Sno</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="78" parent="27" name="PK__Shop__CA1FE464F29D7847">
-      <ObjectId>1861581670</ObjectId>
+    <key id="74" parent="27" name="PK__Shop__CA1FE46480DF003A">
+      <ObjectId>114099447</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-06-18.18:44:19.453</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-18.18:44:19.453</ModifiedTimestamp>
+      <CreatedTimestamp>2018-06-21.17:01:35.523</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-21.17:01:35.523</ModifiedTimestamp>
       <ColNames>Sno</ColNames>
-      <UnderlyingIndexName>PK__Shop__CA1FE464F29D7847</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Shop__CA1FE46480DF003A</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="79" parent="28" name="Tno">
+    <column id="75" parent="28" name="Tno">
       <Position>1</Position>
       <DataType>char(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="80" parent="28" name="Tname">
+    <column id="76" parent="28" name="Tname">
       <Position>2</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="81" parent="28" name="Tkind">
+    <column id="77" parent="28" name="Tkind">
       <Position>3</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="82" parent="28" name="Tprice">
+    <column id="78" parent="28" name="Tprice">
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <column id="83" parent="28" name="Tarea">
+    <column id="79" parent="28" name="Tarea">
       <Position>5</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="84" parent="28" name="PK__Thing__C450026D11875026">
+    <index id="80" parent="28" name="PK__Thing__C450026D11875026">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Tno</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="85" parent="28" name="PK__Thing__C450026D11875026">
+    <key id="81" parent="28" name="PK__Thing__C450026D11875026">
       <ObjectId>1013578649</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-06-15.16:41:03.983</CreatedTimestamp>
@@ -408,52 +392,48 @@
       <UnderlyingIndexName>PK__Thing__C450026D11875026</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="86" parent="29" name="Ano">
+    <column id="82" parent="29" name="Ano">
       <Position>1</Position>
       <DataType>char(10 char)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="87" parent="29" name="Aname">
+    <column id="83" parent="29" name="Aname">
       <Position>2</Position>
       <DataType>char(20 char)|0s</DataType>
     </column>
-    <column id="88" parent="29" name="Asex">
+    <column id="84" parent="29" name="Asex">
       <Position>3</Position>
       <DataType>char(5 char)|0s</DataType>
     </column>
-    <column id="89" parent="29" name="Awork">
+    <column id="85" parent="29" name="Awork">
       <Position>4</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="90" parent="29" name="Mno">
+    <column id="86" parent="29" name="Mno">
       <Position>5</Position>
       <DataType>char(10 char)|0s</DataType>
     </column>
-    <column id="91" parent="29" name="Aprice">
-      <Position>6</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="92" parent="29" name="PK__Ticket__C697D363B958C9EA">
+    <index id="87" parent="29" name="PK__Ticket__C697D36348E87D27">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Ano</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="93" parent="29" name="PK__Ticket__C697D363B958C9EA">
-      <ObjectId>1157579162</ObjectId>
+    <key id="88" parent="29" name="PK__Ticket__C697D36348E87D27">
+      <ObjectId>34099162</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-06-15.16:52:19.940</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-15.16:52:19.940</ModifiedTimestamp>
+      <CreatedTimestamp>2018-06-21.16:36:25.623</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-21.16:36:25.623</ModifiedTimestamp>
       <ColNames>Ano</ColNames>
-      <UnderlyingIndexName>PK__Ticket__C697D363B958C9EA</UnderlyingIndexName>
+      <UnderlyingIndexName>PK__Ticket__C697D36348E87D27</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <check id="94" parent="29" name="CK__Ticket__Asex__45F365D3">
-      <ObjectId>1173579219</ObjectId>
+    <check id="89" parent="29" name="CK__Ticket__Asex__02FC7413">
+      <ObjectId>50099219</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-06-15.16:52:19.947</CreatedTimestamp>
-      <ModifiedTimestamp>2018-06-15.16:52:19.947</ModifiedTimestamp>
+      <CreatedTimestamp>2018-06-21.16:36:25.627</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-21.16:36:25.627</ModifiedTimestamp>
       <ColNames>Asex</ColNames>
       <Predicate>[Asex]=&apos;女&apos; OR [Asex]=&apos;男&apos;</Predicate>
     </check>

@@ -17,49 +17,14 @@ public class SQLserver {
     Connection ct;
     PreparedStatement ps;
     ResultSet rs;
-    String user, pwd, pow;
+    String user, pwd;
 
-
-    String URL = "jdbc:sqlserver://localhost:1433;DatabaseName=HZZX";
-    String USERNAME = "wyf";
-    String PASSWORD = "123456";
-
-    String name;
-
-    /*
-     * 将此类设置为单例模式。
-     * 1、私有化构造函数
-     * 2、创建对象
-     * 3、设置一个用来获取实例的public方法。
-     */
-    private SQLserver() {
-
-    }
-
-    private static final SQLserver ss = new SQLserver();
-
-    public static SQLserver getInstance() {
-        return ss;
-
-    }
-
-    //将连接数据库的方法封装为一个方法
-    public void ConnectSQL() {
-        try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); //加载驱动
-
-            ct = DriverManager.getConnection(URL, USERNAME, PASSWORD); //得到连接
-
-            System.out.println("已成功连接数据库...");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+    public SQLserver() {}
 
     //注册用户的方法
     public void UserRegis(String a, String b) {
         try {
+            ct = DatabaseConnection.getConnection();
             ps = ct.prepareStatement("insert into Operator values(?,?)");
             ps.setString(1, a);
             ps.setString(2, b);
@@ -82,6 +47,7 @@ public class SQLserver {
     //	管理员登录验证方法
     public void SQLverify1(String a, String b) {
         try {
+            ct = DatabaseConnection.getConnection();
             ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");
             ps.setString(1, a);
             ps.setString(2, b);
@@ -107,6 +73,7 @@ public class SQLserver {
     //	客户登录验证方法
     public void SQLverify2(String a, String b) {
         try {
+            ct = DatabaseConnection.getConnection();
             ps = ct.prepareStatement("select * from Operator where Sacc=? and Spwd=?");
             ps.setString(1, a);
             ps.setString(2, b);
@@ -132,6 +99,7 @@ public class SQLserver {
     //注册验证方法，判断用户名是否已经存在
     public void ZhuceVerify1(String a) {
         try {
+            ct = DatabaseConnection.getConnection();
             ps = ct.prepareStatement("select * from Operator where Sacc=?");
             ps.setString(1, a);
 

@@ -4,13 +4,7 @@ import HZZX.View.SQLserver;
 
 public class Facade {
 
-
-    SQLserver s = SQLserver.getInstance();
-
-    //连接数据库
-    public void ConnectSQL() {
-        s.ConnectSQL();
-    }
+    SQLserver s = new SQLserver();
 
     //登录成功与否的验证
     public void SQLverify1(String a, String b) {

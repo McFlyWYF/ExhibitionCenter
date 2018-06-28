@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class BuyTicket extends JFrame implements ActionListener {
@@ -85,6 +86,27 @@ public class BuyTicket extends JFrame implements ActionListener {
         this.setBounds(700,300,600,400);
     }
 
+    public int verify1(){
+        Connection con = null;
+        ResultSet rs;
+        int result = 0;
+        try {
+            con = DatabaseConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("select * from Meeting where Mno = ?");
+            ps.setString(1,jtf5.getText());
+            rs = ps.executeQuery();
+            if (rs.next()){
+                JOptionPane.showMessageDialog(null,"该会展编号存在","提示消息",JOptionPane.WARNING_MESSAGE);
+                result = 1;
+            }else {
+                JOptionPane.showMessageDialog(null,"该会展编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
+                result = 0;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
 
     public void insertinformation() {
         Connection con = null;
@@ -121,7 +143,7 @@ public class BuyTicket extends JFrame implements ActionListener {
                 e.printStackTrace();
             }
         }
-        if (result == 1){
+        if (result == 1 && (verify1() == 1)){
             JOptionPane.showMessageDialog(null,"购票成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("购票成功");
             clear();
