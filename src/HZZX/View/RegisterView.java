@@ -1,5 +1,6 @@
 package HZZX.View;
 
+import HZZX.utils.DatabaseConnection;
 import HZZX.utils.Facade;
 
 import javax.swing.*;
@@ -152,8 +153,7 @@ public class RegisterView extends JFrame implements ActionListener {
             jtf1.setText("");
             jtf2.setText("");
         } else {
-            //使用门面模式
-            fcd.ConnectSQL();
+            DatabaseConnection.getConnection();
             fcd.zhuceverify1(jtf1.getText());
 
             this.jtf1.setText("");
@@ -176,7 +176,7 @@ public class RegisterView extends JFrame implements ActionListener {
             JOptionPane.showMessageDialog(null, "密码填写错误,必须为6位字母_或者数字", "提示信息", JOptionPane.WARNING_MESSAGE);
             jtf2.setText("");
         } else {
-            fcd.ConnectSQL();
+            DatabaseConnection.getConnection();
             fcd.zhuceverify1(jtf1.getText());
             this.jtf1.setText("");
             this.jrb2.setText("");

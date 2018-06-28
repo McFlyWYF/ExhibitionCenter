@@ -27,14 +27,15 @@ public class SelectTicket extends JFrame{
         columnNames.add("姓名");
         columnNames.add("性别");
         columnNames.add("职业");
-        columnNames.add("会展编号");
+        columnNames.add("会展名称");
+        columnNames.add("展馆名称");
         columnNames.add("门票价格");
 
 
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select Ano,Aname,Asex,Awork,Ticket.Mno,Mprice from Ticket,Meeting where Ticket.Mno = Meeting.Mno");
+            ps = con.prepareStatement("select Ano,Aname,Asex,Awork,Meeting.Mname,Place.Pname,Mprice from Ticket,Meeting,Place where Meeting.Pno = Place.Pno and Ticket.Mno = Meeting.Mno");
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();
@@ -44,6 +45,7 @@ public class SelectTicket extends JFrame{
                 vector.add(rs.getString(4));
                 vector.add(rs.getString(5));
                 vector.add(rs.getString(6));
+                vector.add(rs.getString(7));
                 rowData.add(vector);
             }
             System.out.println("OK");

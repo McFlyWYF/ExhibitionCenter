@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class InsertReserve extends JFrame implements ActionListener {
@@ -22,7 +23,7 @@ public class InsertReserve extends JFrame implements ActionListener {
 
         jt1 = new JTextField(8);
         jt2 = new JTextField(8);
-        jt3 = new JTextField(8);
+        //jt3 = new JTextField(8);
         jt4 = new JTextField(8);
         jt5 = new JTextField(8);
         jt6 = new JTextField(8);
@@ -30,8 +31,8 @@ public class InsertReserve extends JFrame implements ActionListener {
         jl1 = new JLabel("展馆预约");
         jl2 = new JLabel("预约编号");
         jl3 = new JLabel("展馆编号");
-        jl4 = new JLabel("展商编号");
-        jl5 = new JLabel("展商姓名");
+        //jl4 = new JLabel("展商编号");
+        jl5 = new JLabel("姓名");
         jl6 = new JLabel("时间");
         jl7 = new JLabel("个数");
 
@@ -57,8 +58,8 @@ public class InsertReserve extends JFrame implements ActionListener {
         jp2.add(jl3);
         jp2.add(jt2);
 
-        jp3.add(jl4);
-        jp3.add(jt3);
+        //jp3.add(jl4);
+        //jp3.add(jt3);
         jp3.add(jl5);
         jp3.add(jt4);
 
@@ -86,35 +87,56 @@ public class InsertReserve extends JFrame implements ActionListener {
     public void clear(){
         jt1.setText("");
         jt2.setText("");
-        jt3.setText("");
+        //jt3.setText("");
         jt4.setText("");
         jt5.setText("");
         jt6.setText("");
     }
 
+    public int verify1(){
+        Connection con = null;
+        ResultSet rs;
+        int result = 0;
+        try {
+            con = DatabaseConnection.getConnection();
+            PreparedStatement ps = con.prepareStatement("select * from Place where Pno = ?");
+            ps.setString(1,jt2.getText());
+            rs = ps.executeQuery();
+            if (rs.next()){
+                JOptionPane.showMessageDialog(null,"该编号存在","提示消息",JOptionPane.WARNING_MESSAGE);
+                result = 1;
+            }else {
+                JOptionPane.showMessageDialog(null,"该编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
+                result = 0;
+            }
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        return result;
+    }
 
     public void placeReserve() {
         Connection con = null;
         int result = 0;
         try{
             con = DatabaseConnection.getConnection();
-            String sql = "insert into Reserve values (?,?,?,?,?,?)";
+            String sql = "insert into Reserve values (?,?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             PlaceReserveInformation pi = new PlaceReserveInformation();
 
             pi.setR_id(jt1.getText());
             pi.setP_id(jt2.getText());
-            pi.setB_id(jt3.getText());
+            //pi.setB_id(jt3.getText());
             pi.setB_name(jt4.getText());
             pi.setTime(jt5.getText());
             pi.setNum((jt6.getText()));
 
             ps.setString(1,pi.getR_id());
             ps.setString(2,pi.getP_id());
-            ps.setString(3,pi.getB_id());
-            ps.setString(4,pi.getB_name());
-            ps.setString(5,pi.getTime());
-            ps.setString(6,pi.getNum());
+            //ps.setString(3,pi.getB_id());
+            ps.setString(3,pi.getB_name());
+            ps.setString(4,pi.getTime());
+            ps.setString(5,pi.getNum());
 
             result = ps.executeUpdate();
         }catch (SQLException e){
@@ -125,7 +147,7 @@ public class InsertReserve extends JFrame implements ActionListener {
             }catch (SQLException e){
                 e.printStackTrace();
             }
-        }if (result == 1){
+        }if (result == 1 && (verify1() == 1)){
             JOptionPane.showMessageDialog(null,"预约成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("预约成功");
             clear();

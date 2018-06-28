@@ -1,5 +1,6 @@
 package HZZX.View;
 
+import HZZX.utils.DatabaseConnection;
 import HZZX.utils.Facade;
 
 import javax.swing.*;
@@ -156,9 +157,9 @@ public class MainView extends JFrame implements ActionListener {
             else {
                 //调用登录方法
                 if (jrb1.isSelected()) {
-                    login1();
+                        login1();
                 } else if (jrb2.isSelected()) {
-                    login2();
+                        login2();
                 }
             }
         } else if (e.getActionCommand() == "注册") {
@@ -177,10 +178,8 @@ public class MainView extends JFrame implements ActionListener {
     //管理员登录方法
     public void login1() {
 
-        fcd.ConnectSQL();
+        DatabaseConnection.getConnection();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
-
-        // n = JOptionPane.showConfirmDialog(null, "你高兴吗?", "标题",JOptionPane.YES_NO_OPTION);
 
         this.jtf.setText("");
         this.jpf.setText("");
@@ -192,7 +191,7 @@ public class MainView extends JFrame implements ActionListener {
     //客户登录方法
     public void login2() {
 
-        fcd.ConnectSQL();
+        DatabaseConnection.getConnection();
         fcd.SQLverify2(jtf.getText(), jpf.getText());
 
         this.jtf.setText("");
