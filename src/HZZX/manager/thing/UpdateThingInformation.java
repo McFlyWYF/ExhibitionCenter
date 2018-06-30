@@ -14,12 +14,12 @@ import java.sql.SQLException;
 public class UpdateThingInformation extends JFrame implements ActionListener {
 
 
-    JTextField jt1,jt2,jt3,jt4,jt5,jt6;
-    JLabel jl1,jl2,jl3,jl4,jl5,jl6,jl7;
-    JPanel jp1,jp2,jp3,jp4,jp5,jp6,jp7,jp8;
-    JButton jb1,jb2;
+    JTextField jt1, jt2, jt3, jt4, jt5, jt6;
+    JLabel jl1, jl2, jl3, jl4, jl5, jl6, jl7;
+    JPanel jp1, jp2, jp3, jp4, jp5, jp6, jp7, jp8;
+    JButton jb1, jb2;
 
-    public UpdateThingInformation(){
+    public UpdateThingInformation() {
 
         jt1 = new JTextField(8);
         jt2 = new JTextField(8);
@@ -75,43 +75,25 @@ public class UpdateThingInformation extends JFrame implements ActionListener {
 
         this.setVisible(true);
         this.setTitle("会展中心管理系统");
-        this.setBounds(720,320,640,450);
-        this.setLayout(new GridLayout(6,4));
+        this.setBounds(720, 320, 640, 450);
+        this.setLayout(new GridLayout(6, 4));
     }
 
-    public int verify(){
-        Connection con = null;
-        ResultSet rs;
-        int result = 0;
-        try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Thing where Tno = ?");
-            ps.setString(1,jt1.getText());
-            rs = ps.executeQuery();
-            if (rs.next()){
-                result = 1;
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return result;
-    }
-
-    private void update(){
+    private void update() {
         Connection con = null;
         ResultSet rs;
         int result = 0;
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("update Thing set Tname = ?,Tkind = ?, Tprice = ?,Tarea = ? where Tno = " + jt1.getText());
-            ps.setString(1,jt2.getText());
-            ps.setString(2,jt3.getText());
-            ps.setString(3,jt4.getText());
-            ps.setString(4,jt5.getText());
+            ps.setString(1, jt2.getText());
+            ps.setString(2, jt3.getText());
+            ps.setString(3, jt4.getText());
+            ps.setString(4, jt5.getText());
 
             ps.executeUpdate();
             System.out.println("修改成功");
-            JOptionPane.showMessageDialog(null,"修改成功","提示消息",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null, "修改成功", "提示消息", JOptionPane.WARNING_MESSAGE);
             jt1.setText("");
             jt2.setText("");
             jt3.setText("");
@@ -119,23 +101,21 @@ public class UpdateThingInformation extends JFrame implements ActionListener {
             jt5.setText("");
             con.close();
             System.out.println("数据库关闭");
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回"){
+        if (e.getActionCommand() == "返回") {
             dispose();
             new UpdateThing();
-        }else if (e.getActionCommand() == "确定"){
-            if (verify() == 1) {
-                update();
-            }else {
-                JOptionPane.showMessageDialog(null,"该编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
-                jt1.setText("");
-            }
+        } else if (e.getActionCommand() == "确定") {
+            update();
+        } else {
+            JOptionPane.showMessageDialog(null, "该编号不存在，请重新输入", "提示消息", JOptionPane.WARNING_MESSAGE);
+            jt1.setText("");
         }
     }
 }
