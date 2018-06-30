@@ -1,6 +1,7 @@
 package HZZX.View;
 
 import HZZX.bean.MeetingInformation;
+import HZZX.manager.place.UpdatePlace;
 import HZZX.utils.DatabaseConnection;
 import sun.applet.Main;
 
@@ -18,6 +19,8 @@ public class SQLserver {
     PreparedStatement ps;
     ResultSet rs;
     String user, pwd;
+
+    String a,b,c,d,ee,f;
 
     public SQLserver() {}
 
@@ -60,6 +63,7 @@ public class SQLserver {
                 pwd = rs.getString(2);
                 JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
                 System.out.println("登录成功");
+                new ManagerMain();
             } else {
                 JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
@@ -86,6 +90,7 @@ public class SQLserver {
                 pwd = rs.getString(2);
                 JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
                 System.out.println("登录成功");
+                new Customer();
             } else {
                 JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
             }

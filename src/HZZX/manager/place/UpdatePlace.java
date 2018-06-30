@@ -51,6 +51,10 @@ public class UpdatePlace extends JFrame implements ActionListener {
         this.setTitle("会展中心管理系统");
     }
 
+    public String fun(){
+        return jt1.getText();
+    }
+
     public int verify(){
         Connection con = null;
         ResultSet rs;

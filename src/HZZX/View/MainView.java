@@ -28,7 +28,8 @@ public class MainView extends JFrame implements ActionListener {
     JLabel jlb1, jlb2, jlb3 = null;
     JPasswordField jpf = null;
 
-
+    String managername = "\\w{3,6}";
+    String username = "\\w{7,11}";
 
     public static void main(String[] args) {
         //InitGloalFont.InitglobalFont(new Font("alias", Font.PLAIN, 22));
@@ -157,9 +158,19 @@ public class MainView extends JFrame implements ActionListener {
             else {
                 //调用登录方法
                 if (jrb1.isSelected()) {
+                    boolean name = jtf.getText().matches(managername);
+                    if (name == true) {
                         login1();
+                    }else {
+                        JOptionPane.showMessageDialog(null,"用户名长度在3-6位之间","提示消息",JOptionPane.WARNING_MESSAGE);
+                    }
                 } else if (jrb2.isSelected()) {
+                    boolean name = jtf.getText().matches(username);
+                    if (name == true) {
                         login2();
+                    }else {
+                        JOptionPane.showMessageDialog(null,"用户名长度在7-11位之间","提示消息",JOptionPane.WARNING_MESSAGE);
+                   }
                 }
             }
         } else if (e.getActionCommand() == "注册") {
@@ -176,28 +187,15 @@ public class MainView extends JFrame implements ActionListener {
     }
 
     //管理员登录方法
-    public void login1() {
-
-        DatabaseConnection.getConnection();
+    public void login1() {//DatabaseConnection.getConnection();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
-
-        this.jtf.setText("");
-        this.jpf.setText("");
-
         this.dispose();
-        new ManagerMain();
     }
 
     //客户登录方法
     public void login2() {
 
-        DatabaseConnection.getConnection();
         fcd.SQLverify2(jtf.getText(), jpf.getText());
-
-        this.jtf.setText("");
-        this.jpf.setText("");
-
         this.dispose();
-        new Customer();
     }
 }
