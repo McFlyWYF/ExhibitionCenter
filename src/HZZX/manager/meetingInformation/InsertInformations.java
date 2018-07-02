@@ -33,7 +33,6 @@ public class InsertInformations extends JFrame implements ActionListener {
         jb1.addActionListener(this);
 
         jtf1 = new JTextField(6);
-        jtf1.setSize(200,80);
         jtf2 = new JTextField(6);
         jtf3 = new JTextField(6);
         jtf4 = new JTextField(6);
@@ -92,7 +91,7 @@ public class InsertInformations extends JFrame implements ActionListener {
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("select * from Place where Pno = ?");
-            ps.setString(1,jtf3.getText());
+            ps.setString(1,jtf6.getText());
             rs = ps.executeQuery();
             if (rs.next()){
                 result = 1;
@@ -111,7 +110,7 @@ public class InsertInformations extends JFrame implements ActionListener {
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("select * from Business where Bno = ?");
-            ps.setString(1,jtf4.getText());
+            ps.setString(1,jtf3.getText());
             rs = ps.executeQuery();
             if (rs.next()){
                 result = 1;
@@ -130,7 +129,7 @@ public class InsertInformations extends JFrame implements ActionListener {
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement ps = con.prepareStatement("select * from Thing where Tno = ?");
-            ps.setString(1,jtf6.getText());
+            ps.setString(1,jtf4.getText());
             rs = ps.executeQuery();
             if (rs.next()){
                 result = 1;
@@ -150,26 +149,35 @@ public class InsertInformations extends JFrame implements ActionListener {
             PreparedStatement ps = con.prepareStatement(sql);
             MeetingInformation mi = new MeetingInformation();
 
-            mi.setM_id(jtf1.getText());
-            mi.setM_name(jtf2.getText());
-            mi.setB_id(jtf3.getText());
-            mi.setT_id(jtf4.getText());
-            //mi.setT_name(jtf5.getText());
-            mi.setAddress(jtf6.getText());
-            mi.setTime(jtf7.getText());
-            //mi.setKind(jtf8.getText());
-            mi.setPrice(jtf9.getText());
+            if ((verifyBno() == 1) && (verifyPno() == 1) && (verifyTno() == 1)){
+                mi.setM_id(jtf1.getText());
+                mi.setM_name(jtf2.getText());
+                mi.setB_id(jtf3.getText());
+                mi.setT_id(jtf4.getText());
+                //mi.setT_name(jtf5.getText());
+                mi.setAddress(jtf6.getText());
+                mi.setTime(jtf7.getText());
+                //mi.setKind(jtf8.getText());
+                mi.setPrice(jtf9.getText());
 
-            ps.setString(1,mi.getM_id());
-            ps.setString(2,mi.getM_name());
-            ps.setString(3,mi.getB_id());
-            ps.setString(4, mi.getT_id());
-            //ps.setString(5,mi.getT_name());
-            ps.setString(5,mi.getAddress());
-            ps.setString(6,mi.getTime());
-            //ps.setString(8,mi.getKind());
-            ps.setString(7,mi.getPrice());
-            result = ps.executeUpdate();
+                ps.setString(1,mi.getM_id());
+                ps.setString(2,mi.getM_name());
+                ps.setString(3,mi.getB_id());
+                ps.setString(4, mi.getT_id());
+                //ps.setString(5,mi.getT_name());
+                ps.setString(5,mi.getAddress());
+                ps.setString(6,mi.getTime());
+                //ps.setString(8,mi.getKind());
+                ps.setString(7,mi.getPrice());
+                result = ps.executeUpdate();
+                JOptionPane.showMessageDialog(null,"发布成功","提示消息",JOptionPane.WARNING_MESSAGE);
+                System.out.println("插入数据成功");
+                clear();
+            }else {
+                JOptionPane.showMessageDialog(null, "发布失败，编号不存在", "提示消息", JOptionPane.WARNING_MESSAGE);
+                System.out.println("插入数据失败");
+                clear();
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -179,14 +187,6 @@ public class InsertInformations extends JFrame implements ActionListener {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-        }
-        if ((result == 1) && (verifyBno() == 1) && (verifyPno() == 1) && (verifyTno() == 1)){
-            JOptionPane.showMessageDialog(null,"发布成功","提示消息",JOptionPane.WARNING_MESSAGE);
-            System.out.println("插入数据成功");
-            clear();
-        }else {
-            JOptionPane.showMessageDialog(null, "发布失败，编号不存在", "提示消息", JOptionPane.WARNING_MESSAGE);
-            System.out.println("插入数据失败");
         }
     }
 

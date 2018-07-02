@@ -1,5 +1,6 @@
-package HZZX.manager.place;
+package HZZX.customer.shopping;
 
+import HZZX.customer.placeReserve.SelectReserve;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -11,48 +12,41 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UpdatePlace extends JFrame implements ActionListener {
+public class SelectSno extends JFrame implements ActionListener {
 
     JButton jb1,jb2;
     JPanel jp1,jp2,jp3;
     JLabel jl1,jl2;
-    JTextField jt1;
+    public static JTextField jt1;
 
-    public UpdatePlace(){
+    public SelectSno(){
         jb1 = new JButton("确定");
-        //jb2 = new JButton("返回");
 
         jp1 = new JPanel();
         jp2 = new JPanel();
         jp3 = new JPanel();
 
-        jl1 = new JLabel("展馆信息修改系统");
-        jl2 = new JLabel("展馆号");
+        jl1 = new JLabel("展品采购订单查询系统");
+        jl2 = new JLabel("订单号");
 
         jt1 = new JTextField(8);
 
         jb1.addActionListener(this);
-        //jb2.addActionListener(this);
 
         jp1.add(jl1);
         jp2.add(jl2);
         jp2.add(jt1);
 
         jp3.add(jb1);
-        //jp3.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
         this.add(jp3);
 
         this.setVisible(true);
-        this.setLayout(new GridLayout(4,3));
+        this.setLayout(new GridLayout(3,1));
         this.setBounds(720,350,510,280);
         this.setTitle("会展中心管理系统");
-    }
-
-    public String fun(){
-        return jt1.getText();
     }
 
     public int verify(){
@@ -61,7 +55,7 @@ public class UpdatePlace extends JFrame implements ActionListener {
         int result = 0;
         try {
             con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Place where Pno = ?");
+            PreparedStatement ps = con.prepareStatement("select * from Shop where Sno = ?");
             ps.setString(1,jt1.getText());
             rs = ps.executeQuery();
             if (rs.next()){
@@ -78,9 +72,9 @@ public class UpdatePlace extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       if (e.getActionCommand() == "确定") {
+        if (e.getActionCommand() == "确定") {
             if (verify() == 1) {
-                new UpdatePlaceInformation();
+                new SelectThings();
                 dispose();
 
             }else {

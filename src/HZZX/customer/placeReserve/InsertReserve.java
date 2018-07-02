@@ -47,9 +47,9 @@ public class InsertReserve extends JFrame implements ActionListener {
 
 
         jb1 = new JButton("预约");
-        //jb2 = new JButton("返回");
+        jb2 = new JButton("更新");
         jb1.addActionListener(this);
-        //jb2.addActionListener(this);
+        jb2.addActionListener(this);
 
         jp1.add(jl1);
 
@@ -69,7 +69,7 @@ public class InsertReserve extends JFrame implements ActionListener {
         jp4.add(jt6);
 
         jp5.add(jb1);
-        //jp5.add(jb2);
+        jp5.add(jb2);
 
         this.add(jp1);
         this.add(jp2);
@@ -115,6 +115,71 @@ public class InsertReserve extends JFrame implements ActionListener {
         return result;
     }
 
+    //获取展馆展位数
+    public int getPnum(){
+        Connection con = null;
+        ResultSet rs = null;
+        int num1 = 0;
+        try{
+            con = DatabaseConnection.getConnection();
+            String sql = "select Pnum from Place where Pno = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,jt2.getText());
+            rs = ps.executeQuery();
+            if (rs.next()){
+                num1 = rs.getInt(1);
+            }
+            System.out.println("展位数查询成功");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        System.out.println(num1);
+        return num1;
+    }
+
+    //获取预约订单展位数
+    public int getRnum(){
+        Connection con = null;
+        ResultSet rs = null;
+        int num2 = 0;
+        PlaceReserveInformation pi = new PlaceReserveInformation();
+        try{
+            con = DatabaseConnection.getConnection();
+            String sql = "select Rnum from Reserve where RNO = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,jt1.getText());
+            rs = ps.executeQuery();
+            if (rs.next()){
+                num2 = rs.getInt(1);
+            }
+            System.out.println("展位数查询成功");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+        System.out.println(num2);
+        return num2;
+    }
+
+    public void updatePlace(){
+        Connection con = null;
+        int n1 = 0,n2 = 0,n3 = 0;
+        try{
+            con = DatabaseConnection.getConnection();
+            String sql = "update Place set Pnum = ? where Pno = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            n1 = this.getPnum();
+            n2 = this.getRnum();
+            n3 = n1-n2;
+            ps.setInt(1,n3);
+            ps.setString(2,jt2.getText());
+            ps.executeUpdate();
+            System.out.println("展位数更新成功");
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+
     public void placeReserve() {
         Connection con = null;
         int result = 0;
@@ -124,21 +189,23 @@ public class InsertReserve extends JFrame implements ActionListener {
             PreparedStatement ps = con.prepareStatement(sql);
             PlaceReserveInformation pi = new PlaceReserveInformation();
 
-            pi.setR_id(jt1.getText());
-            pi.setP_id(jt2.getText());
-            //pi.setB_id(jt3.getText());
-            pi.setB_name(jt4.getText());
-            pi.setTime(jt5.getText());
-            pi.setNum((jt6.getText()));
+            if (verify1() == 1) {
+                pi.setR_id(jt1.getText());
+                pi.setP_id(jt2.getText());
+                //pi.setB_id(jt3.getText());
+                pi.setB_name(jt4.getText());
+                pi.setTime(jt5.getText());
+                pi.setNum((jt6.getText()));
 
-            ps.setString(1,pi.getR_id());
-            ps.setString(2,pi.getP_id());
-            //ps.setString(3,pi.getB_id());
-            ps.setString(3,pi.getB_name());
-            ps.setString(4,pi.getTime());
-            ps.setString(5,pi.getNum());
+                ps.setString(1, pi.getR_id());
+                ps.setString(2, pi.getP_id());
+                //ps.setString(3,pi.getB_id());
+                ps.setString(3, pi.getB_name());
+                ps.setString(4, pi.getTime());
+                ps.setString(5, pi.getNum());
 
-            result = ps.executeUpdate();
+                result = ps.executeUpdate();
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
@@ -147,10 +214,10 @@ public class InsertReserve extends JFrame implements ActionListener {
             }catch (SQLException e){
                 e.printStackTrace();
             }
-        }if (result == 1 && (verify1() == 1)){
+        }if (result == 1){
             JOptionPane.showMessageDialog(null,"预约成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("预约成功");
-            clear();
+            //clear();
         }else if (result == 0){
             JOptionPane.showMessageDialog(null,"预约失败","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("预约失败");
@@ -160,10 +227,11 @@ public class InsertReserve extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand() == "返回"){
-
+        if (e.getActionCommand() == "更新"){
+            updatePlace();
         }else if (e.getActionCommand() == "预约"){
             placeReserve();
+
         }
     }
 }

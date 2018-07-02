@@ -50,7 +50,6 @@ public class InsertBusiness extends JFrame implements ActionListener {
 
 
         jb1 = new JButton("添加");
-        //jb2 = new JButton("返回");
         jb1.addActionListener(this);
         //jb2.addActionListener(this);
 

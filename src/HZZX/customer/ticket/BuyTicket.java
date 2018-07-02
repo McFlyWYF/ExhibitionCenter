@@ -117,22 +117,24 @@ public class BuyTicket extends JFrame implements ActionListener {
             PreparedStatement ps = con.prepareStatement(sql);
             TicketInformation mi = new TicketInformation();
 
-            mi.setId(jtf1.getText());
-            mi.setName(jtf2.getText());
-            mi.setSex(jtf3.getText());
-            mi.setWork(jtf4.getText());
-            mi.setM_id(jtf5.getText());
-            //mi.setPrice(jtf6.getText());
+            if (verify1() == 1) {
+                mi.setId(jtf1.getText());
+                mi.setName(jtf2.getText());
+                mi.setSex(jtf3.getText());
+                mi.setWork(jtf4.getText());
+                mi.setM_id(jtf5.getText());
+                //mi.setPrice(jtf6.getText());
 
 
-            ps.setString(1,mi.getId());
-            ps.setString(2,mi.getName());
-            ps.setString(3,mi.getSex());
-            ps.setString(4,mi.getWork());
-            ps.setString(5,mi.getM_id());
-            //ps.setString(6,mi.getPrice());
+                ps.setString(1, mi.getId());
+                ps.setString(2, mi.getName());
+                ps.setString(3, mi.getSex());
+                ps.setString(4, mi.getWork());
+                ps.setString(5, mi.getM_id());
+                //ps.setString(6,mi.getPrice());
 
-            result = ps.executeUpdate();
+                result = ps.executeUpdate();
+            }
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -143,7 +145,7 @@ public class BuyTicket extends JFrame implements ActionListener {
                 e.printStackTrace();
             }
         }
-        if (result == 1 && (verify1() == 1)){
+        if (result == 1){
             JOptionPane.showMessageDialog(null,"购票成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("购票成功");
             clear();

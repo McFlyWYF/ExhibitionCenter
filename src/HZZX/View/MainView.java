@@ -182,20 +182,25 @@ public class MainView extends JFrame implements ActionListener {
 
     //注册方法
     public void Regis() {
-        this.dispose();  //关闭当前界面
         new RegisterView();   //打开新界面
+        this.dispose();  //关闭当前界面
+
     }
 
     //管理员登录方法
     public void login1() {//DatabaseConnection.getConnection();
         fcd.SQLverify1(jtf.getText(), jpf.getText());
-        this.dispose();
+        jtf.setText("");
+        jpf.setText("");
+        //this.dispose();
     }
 
     //客户登录方法
     public void login2() {
 
         fcd.SQLverify2(jtf.getText(), jpf.getText());
-        this.dispose();
+        jtf.setText("");
+        jpf.setText("");
+        //this.dispose();
     }
 }

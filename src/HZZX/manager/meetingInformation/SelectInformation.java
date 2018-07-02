@@ -1,5 +1,6 @@
 package HZZX.manager.meetingInformation;
 
+import HZZX.customer.ticket.BuyTicket;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
@@ -14,7 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-public class SelectInformation extends JFrame {
+public class SelectInformation extends JFrame implements ActionListener{
 
     JTable jt;
     JScrollPane js = new JScrollPane();
@@ -23,35 +24,14 @@ public class SelectInformation extends JFrame {
     Connection con = null;
     ResultSet rs;
 
-    JButton select;
-    JPanel jp1,jp2;
-    JTextField jtf;
-    JRadioButton jr1,jr2;
-    ButtonGroup group;
-
+    JButton jb;
+    JPanel jp;
 
     public static void main(String[] args) {
         SelectInformation select = new SelectInformation();
     }
 
     public SelectInformation() {
-
-//        select = new JButton("查询");
-//        jtf = new JTextField(8);
-//        jp1 = new JPanel();
-//        jp1.add(jtf);
-//        jp1.add(select);
-//
-//        jr1 = new JRadioButton("时间");
-//        jr2 = new JRadioButton("类别");
-//
-//        group = new ButtonGroup();
-//        group.add(jr1);
-//        group.add(jr2);
-//
-//        jp2 = new JPanel();
-//        jp2.add(jr1);
-//        jp2.add(jr2);
 
         columnNames = new Vector();
         rowData = new Vector();
@@ -95,14 +75,29 @@ public class SelectInformation extends JFrame {
             }
         }
 
+        jb = new JButton("购票");
+        jb.addActionListener(this);
+        jp = new JPanel();
+        jp.add(jb);
+        jp.setLocation(100,100);
+
         jt = new JTable(rowData, columnNames);
         js = new JScrollPane(jt);
 
         this.add(js);
+        this.add(jp);
         this.setTitle("查询");
-        this.setLayout(new GridLayout(1, 1));
-
+        this.setLayout(new GridLayout(2, 1));
         this.setBounds(450, 300, 1200, 600);
         this.setVisible(true);
+        this.setResizable(false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand() == "购票"){
+            new BuyTicket();
+            dispose();
+        }
     }
 }

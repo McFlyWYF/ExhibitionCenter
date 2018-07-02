@@ -105,8 +105,8 @@ public class Business extends JFrame implements ActionListener {
         }else if (e.getActionCommand() == "查询展商信息"){
             new SelectBusiness();
         }else if (e.getActionCommand() == "返回"){
-            dispose();
             new ManagerMain();
+            dispose();
         }
     }
 }

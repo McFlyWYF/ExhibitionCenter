@@ -104,17 +104,17 @@ public class ManagerMain extends JFrame implements ActionListener {
         if (e.getActionCommand() == "退出"){
             System.exit(0);
         }else if (e.getActionCommand() == "会展信息管理"){
-            this.dispose();
             new Information();
+            this.dispose();
         }else if (e.getActionCommand() == "展商管理"){
-            this.dispose();
             new Business();
+            this.dispose();
         }else if (e.getActionCommand() == "展品管理"){
-            this.dispose();
             new Things();
-        }else if (e.getActionCommand() == "展馆管理"){
             this.dispose();
+        }else if (e.getActionCommand() == "展馆管理"){
             new Place();
+            this.dispose();
         }
     }
 }

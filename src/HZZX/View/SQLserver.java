@@ -64,8 +64,11 @@ public class SQLserver {
                 JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
                 System.out.println("登录成功");
                 new ManagerMain();
+                MainView m = new MainView();
+                m.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
+
             }
 
         } catch (SQLException e) {
@@ -91,6 +94,8 @@ public class SQLserver {
                 JOptionPane.showMessageDialog(null, "登录成功！！！", "提示消息", JOptionPane.WARNING_MESSAGE);
                 System.out.println("登录成功");
                 new Customer();
+                MainView m = new MainView();
+                m.dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "用户名或者密码错误，请重新输入！", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
