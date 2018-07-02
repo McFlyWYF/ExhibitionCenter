@@ -76,8 +76,9 @@ public class UpdateThing extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "确定") {
             if (verify() == 1) {
-                dispose();
                 new UpdateThingInformation();
+                dispose();
+
             }else {
                 jt1.setText("");
             }

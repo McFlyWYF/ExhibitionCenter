@@ -3,14 +3,17 @@ package HZZX.View;
 import HZZX.customer.placeReserve.*;
 import HZZX.customer.shopping.BuyThings;
 import HZZX.customer.shopping.DeleteThings;
+import HZZX.customer.shopping.SelectSno;
 import HZZX.customer.shopping.SelectThings;
 import HZZX.customer.ticket.BuyTicket;
 import HZZX.customer.ticket.DeleteTicket;
 import HZZX.customer.ticket.SelectTicket;
+import HZZX.customer.ticket.SelectTno;
 import HZZX.manager.business.SelectBusiness;
 import HZZX.manager.place.SelectPlace;
 import HZZX.manager.meetingInformation.SelectInformation;
 import HZZX.manager.thing.SelectThing;
+import com.sun.org.apache.bcel.internal.generic.Select;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,7 +23,7 @@ import java.awt.event.ActionListener;
 客户主界面
  */
 
-public class Customer extends JFrame implements ActionListener {
+public class Customer extends JFrame  {
 
     JMenuBar jMenuBar;
     JMenu jm1,jm2,jm3,jm4,jm5;
@@ -74,13 +77,6 @@ public class Customer extends JFrame implements ActionListener {
         jmt15 = new JMenuItem("展商查询");
         jmt16 = new JMenuItem("展品查询");
 
-        //jp1 = new JPanel();
-        //jl1 = new JLabel("欢迎使用会展中心管理系统");
-        //Font font = new Font("alias", Font.PLAIN, 28);
-        //jl1.setFont(font);
-        //jp1.add(jl1,BorderLayout.CENTER);
-
-
         jm1.add(jmt1);
         jm1.add(jmt2);
         jm1.add(jmt3);
@@ -128,7 +124,7 @@ public class Customer extends JFrame implements ActionListener {
         jmt2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new SelectReserve();
+                new SelectPno();
             }
         });
 
@@ -150,7 +146,7 @@ public class Customer extends JFrame implements ActionListener {
         jmt6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new SelectTicket();
+                new SelectTno();
             }
         });
 
@@ -171,7 +167,7 @@ public class Customer extends JFrame implements ActionListener {
         jmt10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new SelectThings();
+                new SelectSno();
             }
         });
 
@@ -209,10 +205,5 @@ public class Customer extends JFrame implements ActionListener {
                 new SelectThing();
             }
         });
-    }
-
-    @Override
-    public void actionPerformed(ActionEvent e) {
-
     }
 }

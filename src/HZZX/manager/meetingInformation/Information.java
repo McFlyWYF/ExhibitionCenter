@@ -1,7 +1,11 @@
 package HZZX.manager.meetingInformation;
 
 import HZZX.View.ManagerMain;
+import HZZX.customer.placeReserve.SelectReserve;
+import HZZX.customer.placeReserve.SelectReserveAll;
 import HZZX.customer.shopping.SelectThings;
+import HZZX.customer.shopping.SelectThingsAll;
+import HZZX.customer.ticket.SelectTicketAll;
 import HZZX.manager.meetingInformation.DeleteInformation;
 import HZZX.manager.meetingInformation.InsertInformations;
 import HZZX.manager.meetingInformation.SelectInformation;
@@ -16,7 +20,7 @@ import java.sql.*;
 public class Information extends JFrame implements ActionListener {
 
     JPanel jp1, jp2 ,jp3,jp4 = null;
-    JButton jb1, jb2, jb3,jb4,jb5,jb6 = null;
+    JButton jb1, jb2, jb3,jb4,jb5,jb6,jb7 = null;
     ResultSet rs;
     Statement st;
 
@@ -60,6 +64,9 @@ public class Information extends JFrame implements ActionListener {
         jb6 = new JButton("展品采购信息查询");
         jb6.setBackground(Color.WHITE);
         jb6.setFont(font);
+        jb7 = new JButton("展馆预定信息查询");
+        jb7.setBackground(Color.WHITE);
+        jb7.setFont(font);
 
         jb1.addActionListener(this);
         jb2.addActionListener(this);
@@ -67,6 +74,8 @@ public class Information extends JFrame implements ActionListener {
         jb4.addActionListener(this);
         jb5.addActionListener(this);
         jb6.addActionListener(this);
+        jb7.addActionListener(this);
+
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -78,6 +87,7 @@ public class Information extends JFrame implements ActionListener {
         jp2.add(jb3);
         jp2.add(jb5);
         jp4.add(jb6);
+        jp4.add(jb7);
         jp3.add(jb4);
         jp5.add(jl1);
 
@@ -105,8 +115,9 @@ public class Information extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回") {
-            dispose();
             new ManagerMain();
+            dispose();
+
         } else if (e.getActionCommand() == "查询会展信息") {
             new SelectInformation();
         } else if (e.getActionCommand() == "发布会展信息") {
@@ -117,9 +128,12 @@ public class Information extends JFrame implements ActionListener {
             new DeleteInformation();
         }else if (e.getActionCommand() == "购票信息查询"){
             //this.dispose();
-            new SelectTicket();
+            new SelectTicketAll();
         }else if (e.getActionCommand() == "展品采购信息查询"){
-            new SelectThings();
+            new SelectThingsAll();
+        }
+        else if (e.getActionCommand() == "展馆预定信息查询"){
+            new SelectReserveAll();
         }
     }
 }

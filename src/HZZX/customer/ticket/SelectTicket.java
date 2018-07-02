@@ -4,13 +4,15 @@ import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-public class SelectTicket extends JFrame{
+public class SelectTicket extends JFrame {
 
     JTable jt;
     JScrollPane js = new JScrollPane();
@@ -35,7 +37,8 @@ public class SelectTicket extends JFrame{
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select Ano,Aname,Asex,Awork,Meeting.Mname,Place.Pname,Mprice from Ticket,Meeting,Place where Meeting.Pno = Place.Pno and Ticket.Mno = Meeting.Mno");
+            ps = con.prepareStatement("select no,t_name,sex,work,m_name,p_name,price from v_ticket where no = ?");
+            ps.setString(1,SelectTno.jt1.getText());
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();
@@ -66,9 +69,8 @@ public class SelectTicket extends JFrame{
         this.add(js);
         this.setTitle("查询");
         this.setLayout(new GridLayout(2,2));
-
         this.setBounds(644,300,850,500);
         this.setVisible(true);
-        this.setResizable(false);
+        //this.setResizable(false);
     }
 }

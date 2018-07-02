@@ -25,7 +25,6 @@ public class SelectReserve extends JFrame{
         rowData = new Vector();
         columnNames.add("订单编号");
         columnNames.add("展馆名称");
-        //columnNames.add("展商编号");
         columnNames.add("姓名");
         columnNames.add("时间");
         columnNames.add("展位数");
@@ -34,7 +33,8 @@ public class SelectReserve extends JFrame{
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select RNO,Place.Pname,Bname,Rtime,Rnum from Reserve,Place where Reserve.Pno = Place.Pno");
+            ps = con.prepareStatement("select no,p_name,name,time,num from v_reserve where no = ?");
+            ps.setString(1,SelectPno.jt1.getText());
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();
@@ -67,6 +67,6 @@ public class SelectReserve extends JFrame{
 
         this.setBounds(644,300,850,500);
         this.setVisible(true);
-        this.setResizable(false);
+        //this.setResizable(false);
     }
 }

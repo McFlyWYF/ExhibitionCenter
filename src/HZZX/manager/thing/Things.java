@@ -99,8 +99,9 @@ public class Things extends JFrame implements ActionListener {
             //dispose();
             new UpdateThing();
         }else if (e.getActionCommand() == "返回"){
-            dispose();
             new ManagerMain();
+            dispose();
+
         }
     }
 }

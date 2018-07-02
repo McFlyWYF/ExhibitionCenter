@@ -109,8 +109,9 @@ public class UpdateThingInformation extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "返回") {
-            dispose();
             new UpdateThing();
+            dispose();
+
         } else if (e.getActionCommand() == "确定") {
             update();
         } else {

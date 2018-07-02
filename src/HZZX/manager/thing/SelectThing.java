@@ -1,16 +1,19 @@
 package HZZX.manager.thing;
 
+import HZZX.customer.shopping.BuyThings;
 import HZZX.utils.DatabaseConnection;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Vector;
 
-public class SelectThing extends JFrame{
+public class SelectThing extends JFrame implements ActionListener {
 
     JTable jt;
     JScrollPane js = new JScrollPane();
@@ -18,6 +21,9 @@ public class SelectThing extends JFrame{
     Vector rowData = null;
     Connection con = null;
     ResultSet rs;
+
+    JButton jb;
+    JPanel jp;
 
     public SelectThing(){
 
@@ -28,6 +34,7 @@ public class SelectThing extends JFrame{
         columnNames.add("类别");
         columnNames.add("售价");
         columnNames.add("规格");
+        columnNames.add("是否已售卖");
 
         try{
             con = DatabaseConnection.getConnection();
@@ -41,6 +48,7 @@ public class SelectThing extends JFrame{
                 vector.add(rs.getString(3));
                 vector.add(rs.getString(4));
                 vector.add(rs.getString(5));
+                vector.add(rs.getString(6));
                 rowData.add(vector);
             }
             System.out.println("OK");
@@ -58,12 +66,28 @@ public class SelectThing extends JFrame{
         jt = new JTable(rowData,columnNames);
         js = new JScrollPane(jt);
 
+        jb = new JButton("购买");
+        jb.addActionListener(this);
+        jp = new JPanel();
+        jp.add(jb);
+        jp.setLocation(100,100);
+
         this.add(js);
+        this.add(jp);
         this.setTitle("查询");
-        this.setLayout(new GridLayout(1,2));
+        this.setLayout(new GridLayout(2,2));
 
         this.setBounds(630,300,850,500);
         this.setVisible(true);
-        //this.setResizable(false);
+        this.setResizable(false);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand() == "购买"){
+            new BuyThings();
+            dispose();
+        }
+
     }
 }

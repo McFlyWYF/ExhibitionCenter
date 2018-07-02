@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class BuyThings extends JFrame implements ActionListener {
 
@@ -95,6 +97,7 @@ public class BuyThings extends JFrame implements ActionListener {
         //jt6.setText("");
     }
 
+    //判断展品编号是否存在
     public int verify2(){
         Connection con = null;
         ResultSet rs;
@@ -117,30 +120,40 @@ public class BuyThings extends JFrame implements ActionListener {
         return result;
     }
 
+    //设置该展品的状态
+    public void isBuy(){
+        Connection con = null;
+        try {
+            con = DatabaseConnection.getConnection();
+            String sql = "update Thing set IsBuy = '是' where Tno = ?";
+            PreparedStatement ps = con.prepareStatement(sql);
+            ps.setString(1,jt3.getText());
+            ps.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
     public void buythings() {
         Connection con = null;
+        String is = null;
         int result = 0;
         try{
             con = DatabaseConnection.getConnection();
             String sql = "insert into Shop values (?,?,?,?)";
             PreparedStatement ps = con.prepareStatement(sql);
             ShopBuyInformation pi = new ShopBuyInformation();
-
-            pi.setS_id(jt1.getText());
-            pi.setS_name(jt2.getText());
-            pi.setT_id(jt3.getText());
-//            pi.setT_name(jt4.getText());
-            pi.setTime(jt5.getText());
-            //pi.setPrice((jt6.getText()));
-
-            ps.setString(1,pi.getS_id());
-            ps.setString(2,pi.getS_name());
-            ps.setString(3,pi.getT_id());
-            //ps.setString(4,pi.getT_name());
-            ps.setString(4,pi.getTime());
-            //ps.setString(6,pi.getPrice());
-
-            result = ps.executeUpdate();
+            if ((verify2() == 1)) {
+                    pi.setS_id(jt1.getText());
+                    pi.setS_name(jt2.getText());
+                    pi.setT_id(jt3.getText());
+                    pi.setTime(jt5.getText());
+                    ps.setString(1, pi.getS_id());
+                    ps.setString(2, pi.getS_name());
+                    ps.setString(3, pi.getT_id());
+                    ps.setString(4, pi.getTime());
+                    result = ps.executeUpdate();
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
@@ -149,12 +162,13 @@ public class BuyThings extends JFrame implements ActionListener {
             }catch (SQLException e){
                 e.printStackTrace();
             }
-        }if (result == 1 && (verify2() == 1)){
+        }if (result == 1){
+            isBuy();
             JOptionPane.showMessageDialog(null,"购买成功","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("购买成功");
             clear();
         }else if (result == 0){
-            JOptionPane.showMessageDialog(null,"购买失败","提示消息",JOptionPane.WARNING_MESSAGE);
+            JOptionPane.showMessageDialog(null,"购买失败，展品已售出","提示消息",JOptionPane.WARNING_MESSAGE);
             System.out.println("购买失败");
             clear();
         }

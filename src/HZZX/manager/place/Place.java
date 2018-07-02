@@ -100,8 +100,9 @@ public class Place extends JFrame implements ActionListener {
             //dispose();
             new UpdatePlace();
         }else if (e.getActionCommand() == "返回"){
-            dispose();
             new ManagerMain();
+            dispose();
+
         }
     }
 }

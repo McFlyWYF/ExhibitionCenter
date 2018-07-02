@@ -153,6 +153,7 @@ public class InsertPlace extends JFrame implements ActionListener {
             }
         }
         if (result == 1) {
+
             JOptionPane.showMessageDialog(null, "添加成功", "提示消息", JOptionPane.WARNING_MESSAGE);
             clear();
         }else if (Verify1() == 0){

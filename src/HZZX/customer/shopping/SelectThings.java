@@ -25,8 +25,9 @@ public class SelectThings extends JFrame{
         rowData = new Vector();
         columnNames.add("订单编号");
         columnNames.add("姓名");
-        columnNames.add("展品编号");
+        //columnNames.add("展品编号");
         columnNames.add("展品名称");
+        columnNames.add("类别");
         columnNames.add("采购时间");
         columnNames.add("售价");
 
@@ -34,7 +35,8 @@ public class SelectThings extends JFrame{
         try{
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select Sno,Sname,Thing.Tno,Thing.Tname,Stime,Thing.Tprice from Shop,Thing where Shop.Tno = Thing.Tno");
+            ps = con.prepareStatement("select no,s_name,t_name,kind,time,price from v_shop where no = ?");
+            ps.setString(1,SelectSno.jt1.getText());
             rs = ps.executeQuery();
             while (rs.next()){
                 Vector vector = new Vector();
@@ -44,6 +46,7 @@ public class SelectThings extends JFrame{
                 vector.add(rs.getString(4));
                 vector.add(rs.getString(5));
                 vector.add(rs.getString(6));
+                //vector.add(rs.getString(7));
                 rowData.add(vector);
             }
             System.out.println("OK");
@@ -64,9 +67,8 @@ public class SelectThings extends JFrame{
         this.add(js);
         this.setTitle("查询");
         this.setLayout(new GridLayout(2,2));
-
         this.setBounds(644,300,850,500);
         this.setVisible(true);
-        this.setResizable(false);
+        //this.setResizable(false);
     }
 }
