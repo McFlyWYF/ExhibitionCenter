@@ -87,25 +87,28 @@ public class InsertThing extends JFrame implements ActionListener {
         Connection con = null;
         int result = 0;
         try {
-            con = DatabaseConnection.getConnection();
-            String sql = "insert into Thing values(?,?,?,?,?)";
-            PreparedStatement ps = con.prepareStatement(sql);
-            ThingInformation mi = new ThingInformation();
+            if (!jtf1.getText().isEmpty() && !jtf2.getText().isEmpty() && !jtf3.getText().isEmpty() && !jtf4.getText().isEmpty() && !jtf5.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                String sql = "insert into Thing values(?,?,?,?,?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ThingInformation mi = new ThingInformation();
 
-            mi.setT_id(jtf1.getText());
-            mi.setT_name(jtf2.getText());
-            mi.setKind(jtf3.getText());
-            mi.setPrice(jtf4.getText());
-            mi.setArea(jtf5.getText());
+                mi.setT_id(jtf1.getText());
+                mi.setT_name(jtf2.getText());
+                mi.setKind(jtf3.getText());
+                mi.setPrice(jtf4.getText());
+                mi.setArea(jtf5.getText());
 
-            ps.setString(1,mi.getT_id());
-            ps.setString(2,mi.getT_name());
-            ps.setString(3,mi.getKind());
-            ps.setString(4,mi.getPrice());
-            ps.setString(5,mi.getArea());
+                ps.setString(1, mi.getT_id());
+                ps.setString(2, mi.getT_name());
+                ps.setString(3, mi.getKind());
+                ps.setString(4, mi.getPrice());
+                ps.setString(5, mi.getArea());
+                result = ps.executeUpdate();
 
-            result = ps.executeUpdate();
-
+            }else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

@@ -27,10 +27,6 @@ public class SelectInformation extends JFrame implements ActionListener{
     JButton jb;
     JPanel jp;
 
-    public static void main(String[] args) {
-        SelectInformation select = new SelectInformation();
-    }
-
     public SelectInformation() {
 
         columnNames = new Vector();
@@ -40,7 +36,6 @@ public class SelectInformation extends JFrame implements ActionListener{
         columnNames.add("展品名称");
         columnNames.add("展商姓名");
         columnNames.add("地址");
-        //columnNames.add("地址");
         columnNames.add("时间");
         columnNames.add("类别");
         columnNames.add("门票价格");
@@ -48,7 +43,8 @@ public class SelectInformation extends JFrame implements ActionListener{
         try {
             con = DatabaseConnection.getConnection();
             PreparedStatement ps;
-            ps = con.prepareStatement("select Mno,Mname,Thing.Tname,Business.Bname,Place.Pname,Mtime,Thing.Tkind,Mprice from Meeting,Thing,Place,Business where Meeting.Tno = Thing.Tno and Meeting.Pno = Place.Pno and Meeting.Bno = Business.Bno");
+            String sql = "select Mno,Mname,Thing.Tname,Business.Bname,Place.Pname,Mtime,Thing.Tkind,Mprice from Meeting,Thing,Place,Business where Meeting.Tno = Thing.Tno and Meeting.Pno = Place.Pno and Meeting.Bno = Business.Bno";
+            ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
                 Vector vector = new Vector();
@@ -60,7 +56,6 @@ public class SelectInformation extends JFrame implements ActionListener{
                 vector.add(rs.getString(6));
                 vector.add(rs.getString(7));
                 vector.add(rs.getString(8));
-                //vector.add(rs.getString(9));
                 rowData.add(vector);
             }
             System.out.println("OK");

@@ -34,7 +34,7 @@ public class SelectThing extends JFrame implements ActionListener {
         columnNames.add("类别");
         columnNames.add("售价");
         columnNames.add("规格");
-        columnNames.add("是否已售卖");
+        columnNames.add("是否出售");
 
         try{
             con = DatabaseConnection.getConnection();
@@ -88,6 +88,5 @@ public class SelectThing extends JFrame implements ActionListener {
             new BuyThings();
             dispose();
         }
-
     }
 }

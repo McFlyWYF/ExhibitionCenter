@@ -23,7 +23,6 @@ public class InsertReserve extends JFrame implements ActionListener {
 
         jt1 = new JTextField(8);
         jt2 = new JTextField(8);
-        //jt3 = new JTextField(8);
         jt4 = new JTextField(8);
         jt5 = new JTextField(8);
         jt6 = new JTextField(8);
@@ -184,27 +183,31 @@ public class InsertReserve extends JFrame implements ActionListener {
         Connection con = null;
         int result = 0;
         try{
-            con = DatabaseConnection.getConnection();
-            String sql = "insert into Reserve values (?,?,?,?,?)";
-            PreparedStatement ps = con.prepareStatement(sql);
-            PlaceReserveInformation pi = new PlaceReserveInformation();
+            if (!jt1.getText().isEmpty() && !jt2.getText().isEmpty() && !jt4.getText().isEmpty() && !jt5.getText().isEmpty() && !jt6.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                String sql = "insert into Reserve values (?,?,?,?,?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                PlaceReserveInformation pi = new PlaceReserveInformation();
 
-            if (verify1() == 1) {
-                pi.setR_id(jt1.getText());
-                pi.setP_id(jt2.getText());
-                //pi.setB_id(jt3.getText());
-                pi.setB_name(jt4.getText());
-                pi.setTime(jt5.getText());
-                pi.setNum((jt6.getText()));
+                if (verify1() == 1) {
+                    pi.setR_id(jt1.getText());
+                    pi.setP_id(jt2.getText());
+                    //pi.setB_id(jt3.getText());
+                    pi.setB_name(jt4.getText());
+                    pi.setTime(jt5.getText());
+                    pi.setNum((jt6.getText()));
 
-                ps.setString(1, pi.getR_id());
-                ps.setString(2, pi.getP_id());
-                //ps.setString(3,pi.getB_id());
-                ps.setString(3, pi.getB_name());
-                ps.setString(4, pi.getTime());
-                ps.setString(5, pi.getNum());
+                    ps.setString(1, pi.getR_id());
+                    ps.setString(2, pi.getP_id());
+                    //ps.setString(3,pi.getB_id());
+                    ps.setString(3, pi.getB_name());
+                    ps.setString(4, pi.getTime());
+                    ps.setString(5, pi.getNum());
 
-                result = ps.executeUpdate();
+                    result = ps.executeUpdate();
+                }
+            }else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
         }catch (SQLException e){
             e.printStackTrace();
