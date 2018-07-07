@@ -95,31 +95,34 @@ public class InsertBusiness extends JFrame implements ActionListener {
         jt6.setText("");
     }
 
-
     public void buythings() {
         Connection con = null;
         int result = 0;
         try{
-            con = DatabaseConnection.getConnection();
-            String sql = "insert into Business values (?,?,?,?,?,?)";
-            PreparedStatement ps = con.prepareStatement(sql);
-            BusinessInformation pi = new BusinessInformation();
+            if (!jt1.getText().isEmpty() && !jt2.getText().isEmpty() && !jt3.getText().isEmpty() && !jt4.getText().isEmpty() && !jt5.getText().isEmpty() && !jt6.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                String sql = "insert into Business values (?,?,?,?,?,?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                BusinessInformation pi = new BusinessInformation();
 
-            pi.setB_id(jt1.getText());
-            pi.setB_name(jt2.getText());
-            pi.setID(jt3.getText());
-            pi.setWork(jt4.getText());
-            pi.setWorkplace(jt5.getText());
-            pi.setTel((jt6.getText()));
+                pi.setB_id(jt1.getText());
+                pi.setB_name(jt2.getText());
+                pi.setID(jt3.getText());
+                pi.setWork(jt4.getText());
+                pi.setWorkplace(jt5.getText());
+                pi.setTel((jt6.getText()));
 
-            ps.setString(1,pi.getB_id());
-            ps.setString(2,pi.getB_name());
-            ps.setString(3,pi.getID());
-            ps.setString(4,pi.getWork());
-            ps.setString(5,pi.getWorkplace());
-            ps.setString(6,pi.getTel());
+                ps.setString(1, pi.getB_id());
+                ps.setString(2, pi.getB_name());
+                ps.setString(3, pi.getID());
+                ps.setString(4, pi.getWork());
+                ps.setString(5, pi.getWorkplace());
+                ps.setString(6, pi.getTel());
 
-            result = ps.executeUpdate();
+                result = ps.executeUpdate();
+            }else {
+                JOptionPane.showMessageDialog(null,"请输入完整信息","提示消息",JOptionPane.WARNING_MESSAGE);
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }finally {
@@ -140,36 +143,10 @@ public class InsertBusiness extends JFrame implements ActionListener {
     }
 
 
-    public int verify1(){
-        Connection con = null;
-        ResultSet rs;
-        int result = 0;
-        try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Business where Bno = ?");
-            ps.setString(1,jt1.getText());
-            rs = ps.executeQuery();
-            if (rs.next()){
-                JOptionPane.showMessageDialog(null,"该编号已存在,请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
-                result = 0;
-            }else {
-                //JOptionPane.showMessageDialog(null,"该数据不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
-                result = 1;
-            }
-        }catch (SQLException e){
-            e.printStackTrace();
-        }
-        return result;
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand() == "添加") {
-            if (verify1() == 1) {
                 buythings();
-            }else {
-                clear();
-            }
         }
     }
 }

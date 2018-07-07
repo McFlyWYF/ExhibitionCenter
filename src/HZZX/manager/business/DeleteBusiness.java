@@ -70,15 +70,20 @@ public class DeleteBusiness extends JFrame implements ActionListener {
     public void delete(){
         Connection con = null;
         try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("delete from Business where Bno = ?");
-            ps.setString(1,jt1.getText());
-            ps.executeUpdate();
-            System.out.println("数据删除成功");
-            JOptionPane.showMessageDialog(null,"取消成功","提示消息",JOptionPane.WARNING_MESSAGE);
-            jt1.setText("");
-            con.close();
-            System.out.println("数据库关闭成功");
+            if (!jt1.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement("delete from Business where Bno = ?");
+                ps.setString(1, jt1.getText());
+                ps.executeUpdate();
+                System.out.println("数据删除成功");
+                JOptionPane.showMessageDialog(null, "取消成功", "提示消息", JOptionPane.WARNING_MESSAGE);
+                jt1.setText("");
+                con.close();
+                System.out.println("数据库关闭成功");
+            }else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+
+            }
         }catch (SQLException e){
             e.printStackTrace();
         }

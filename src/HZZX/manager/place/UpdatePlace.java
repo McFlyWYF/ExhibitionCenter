@@ -13,12 +13,12 @@ import java.sql.SQLException;
 
 public class UpdatePlace extends JFrame implements ActionListener {
 
-    JButton jb1,jb2;
-    JPanel jp1,jp2,jp3;
-    JLabel jl1,jl2;
-    JTextField jt1;
+    JButton jb1, jb2;
+    JPanel jp1, jp2, jp3;
+    JLabel jl1, jl2;
+    public static JTextField jt1;
 
-    public UpdatePlace(){
+    public UpdatePlace() {
         jb1 = new JButton("确定");
         //jb2 = new JButton("返回");
 
@@ -46,31 +46,35 @@ public class UpdatePlace extends JFrame implements ActionListener {
         this.add(jp3);
 
         this.setVisible(true);
-        this.setLayout(new GridLayout(4,3));
-        this.setBounds(720,350,510,280);
+        this.setLayout(new GridLayout(4, 3));
+        this.setBounds(720, 350, 510, 280);
         this.setTitle("会展中心管理系统");
     }
 
-    public String fun(){
+    public String fun() {
         return jt1.getText();
     }
 
-    public int verify(){
+    public int verify() {
         Connection con = null;
         ResultSet rs;
         int result = 0;
         try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Place where Pno = ?");
-            ps.setString(1,jt1.getText());
-            rs = ps.executeQuery();
-            if (rs.next()){
-                JOptionPane.showMessageDialog(null,"该编号存在","提示消息",JOptionPane.WARNING_MESSAGE);
-                result = 1;
-            }else {
-                JOptionPane.showMessageDialog(null,"该编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
+            if (!jt1.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement("select * from Place where Pno = ?");
+                ps.setString(1, jt1.getText());
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    JOptionPane.showMessageDialog(null, "该编号存在", "提示消息", JOptionPane.WARNING_MESSAGE);
+                    result = 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "该编号不存在，请重新输入", "提示消息", JOptionPane.WARNING_MESSAGE);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
             }
-        }catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
         return result;
@@ -78,12 +82,12 @@ public class UpdatePlace extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-       if (e.getActionCommand() == "确定") {
+        if (e.getActionCommand() == "确定") {
             if (verify() == 1) {
                 new UpdatePlaceInformation();
                 dispose();
 
-            }else {
+            } else {
                 jt1.setText("");
             }
         }

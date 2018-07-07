@@ -15,7 +15,7 @@ public class UpdatePlaceInformation extends JFrame implements ActionListener {
 
 
     JTextField jt1, jt2, jt3, jt4, jt5, jt6;
-    JLabel jl1, jl2, jl3, jl4, jl5, jl6, jl7;
+    JLabel jl1, jl2, jl3, jl4, jl5, jl6, jl7,jLabel;
     JPanel jp1, jp2, jp3, jp4, jp5, jp6, jp7, jp8;
     JButton jb1, jb2;
     String a, b, c, d, ee, f;
@@ -38,6 +38,7 @@ public class UpdatePlaceInformation extends JFrame implements ActionListener {
         jl5 = new JLabel("地址");
         jl6 = new JLabel("负责人");
         jl7 = new JLabel("展位数");
+        jLabel = new JLabel(UpdatePlace.jt1.getText());
 
         jp1 = new JPanel();
         jp2 = new JPanel();
@@ -57,7 +58,7 @@ public class UpdatePlaceInformation extends JFrame implements ActionListener {
         jp1.add(jl1);
 
         jp2.add(jl2);
-        jp2.add(jt1);
+        jp2.add(jLabel);
         jp2.add(jl3);
         jp2.add(jt2);
 
@@ -90,25 +91,30 @@ public class UpdatePlaceInformation extends JFrame implements ActionListener {
         Connection con = null;
         ResultSet rs;
         try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("update Place set Pname = ?,Parea = ?, Padd = ?,Ppeo = ?,Pnum = ? where Pno = " + jt1.getText());
-            ps.setString(1, jt2.getText());
-            ps.setString(2, jt3.getText());
-            ps.setString(3, jt4.getText());
-            ps.setString(4, jt5.getText());
-            ps.setString(5, jt6.getText());
+            if (!jt2.getText().isEmpty() && !jt3.getText().isEmpty() && !jt4.getText().isEmpty() && !jt5.getText().isEmpty() && !jt6.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement("update Place set Pname = ?,Parea = ?, Padd = ?,Ppeo = ?,Pnum = ? where Pno = " + UpdatePlace.jt1.getText());
+                ps.setString(1, jt2.getText());
+                ps.setString(2, jt3.getText());
+                ps.setString(3, jt4.getText());
+                ps.setString(4, jt5.getText());
+                ps.setString(5, jt6.getText());
 
-            ps.executeUpdate();
-            System.out.println("修改成功");
-            JOptionPane.showMessageDialog(null, "修改成功", "提示消息", JOptionPane.WARNING_MESSAGE);
-            jt1.setText("");
-            jt2.setText("");
-            jt3.setText("");
-            jt4.setText("");
-            jt5.setText("");
-            jt6.setText("");
-            con.close();
-            System.out.println("数据库关闭");
+                ps.executeUpdate();
+                System.out.println("修改成功");
+                JOptionPane.showMessageDialog(null, "修改成功", "提示消息", JOptionPane.WARNING_MESSAGE);
+                jt1.setText("");
+                jt2.setText("");
+                jt3.setText("");
+                jt4.setText("");
+                jt5.setText("");
+                jt6.setText("");
+                con.close();
+                System.out.println("数据库关闭");
+            }else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }

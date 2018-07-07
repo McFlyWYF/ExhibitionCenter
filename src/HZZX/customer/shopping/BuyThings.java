@@ -139,11 +139,12 @@ public class BuyThings extends JFrame implements ActionListener {
         String is = null;
         int result = 0;
         try{
-            con = DatabaseConnection.getConnection();
-            String sql = "insert into Shop values (?,?,?,?)";
-            PreparedStatement ps = con.prepareStatement(sql);
-            ShopBuyInformation pi = new ShopBuyInformation();
-            if ((verify2() == 1)) {
+            if (!jt1.getText().isEmpty() && !jt2.getText().isEmpty() && !jt3.getText().isEmpty() && !jt5.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                String sql = "insert into Shop values (?,?,?,?)";
+                PreparedStatement ps = con.prepareStatement(sql);
+                ShopBuyInformation pi = new ShopBuyInformation();
+                if ((verify2() == 1)) {
                     pi.setS_id(jt1.getText());
                     pi.setS_name(jt2.getText());
                     pi.setT_id(jt3.getText());
@@ -153,6 +154,10 @@ public class BuyThings extends JFrame implements ActionListener {
                     ps.setString(3, pi.getT_id());
                     ps.setString(4, pi.getTime());
                     result = ps.executeUpdate();
+                }
+            }else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+
             }
         }catch (SQLException e){
             e.printStackTrace();

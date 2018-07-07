@@ -25,12 +25,10 @@ public class SelectThingsAll extends JFrame{
         rowData = new Vector();
         columnNames.add("订单编号");
         columnNames.add("姓名");
-        //columnNames.add("展品编号");
         columnNames.add("展品名称");
         columnNames.add("类别");
         columnNames.add("采购时间");
         columnNames.add("售价");
-
 
         try{
             con = DatabaseConnection.getConnection();

@@ -16,7 +16,7 @@ public class UpdateBusiness extends JFrame implements ActionListener {
     JButton jb1,jb2;
     JPanel jp1,jp2,jp3;
     JLabel jl1,jl2;
-    JTextField jt1;
+    public static JTextField jt1;
 
     public UpdateBusiness(){
         jb1 = new JButton("确定");
@@ -56,21 +56,27 @@ public class UpdateBusiness extends JFrame implements ActionListener {
         ResultSet rs;
         int result = 0;
         try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("select * from Business where Bno = ?");
-            ps.setString(1,jt1.getText());
-            rs = ps.executeQuery();
-            if (rs.next()){
-                JOptionPane.showMessageDialog(null,"该编号存在","提示消息",JOptionPane.WARNING_MESSAGE);
-                result = 1;
+            if (!jt1.getText().isEmpty()) {
+                con = DatabaseConnection.getConnection();
+                PreparedStatement ps = con.prepareStatement("select * from Business where Bno = ?");
+                ps.setString(1, jt1.getText());
+                rs = ps.executeQuery();
+                if (rs.next()) {
+                    JOptionPane.showMessageDialog(null, "该编号存在", "提示消息", JOptionPane.WARNING_MESSAGE);
+                    result = 1;
+                } else {
+                    JOptionPane.showMessageDialog(null, "该编号不存在，请重新输入", "提示消息", JOptionPane.WARNING_MESSAGE);
+                }
             }else {
-                JOptionPane.showMessageDialog(null,"该编号不存在，请重新输入","提示消息",JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+
             }
         }catch (SQLException e){
             e.printStackTrace();
         }
         return result;
     }
+
 
     @Override
     public void actionPerformed(ActionEvent e) {

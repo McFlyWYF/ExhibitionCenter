@@ -96,53 +96,33 @@ public class InsertPlace extends JFrame implements ActionListener {
         jt6.setText("");
     }
 
-    //验证展商编号是否存在
-    public int Verify1() {
-        int result = 0;
-        try {
-            PreparedStatement ps = null;
-            Connection con = null;
-            ResultSet rs;
-            ps = con.prepareStatement("select * from Place where Pno = ?");
-            ps.setString(1, jt1.getText());
-
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                clear();
-            } else {
-                result = 1;
-            }
-
-        } catch (SQLException e) {
-
-            e.printStackTrace();
-        }
-        return result;
-    }
 
     public void insert() {
         Connection con = null;
         int result = 0;
 
         try {
-            con = DatabaseConnection.getConnection();
-            PreparedStatement ps = con.prepareStatement("insert into Place values(?,?,?,?,?,?)");
-            PlaceInformation b = new PlaceInformation();
-            b.setP_id(jt1.getText());
-            b.setP_name(jt2.getText());
-            b.setArea(jt3.getText());
-            b.setAddress(jt4.getText());
-            b.setPeople(jt5.getText());
-            b.setNum(jt6.getText());
+            if (!jt1.getText().isEmpty() && !jt2.getText().isEmpty() && !jt3.getText().isEmpty() && !jt4.getText().isEmpty() && !jt5.getText().isEmpty() && !jt6.getText().isEmpty()) {
+                    con = DatabaseConnection.getConnection();
+                    PreparedStatement ps = con.prepareStatement("insert into Place values(?,?,?,?,?,?)");
+                    PlaceInformation b = new PlaceInformation();
+                    b.setP_id(jt1.getText());
+                    b.setP_name(jt2.getText());
+                    b.setArea(jt3.getText());
+                    b.setAddress(jt4.getText());
+                    b.setPeople(jt5.getText());
+                    b.setNum(jt6.getText());
 
-            ps.setString(1, b.getP_id());
-            ps.setString(2, b.getP_name());
-            ps.setString(3, b.getArea());
-            ps.setString(4, b.getAddress());
-            ps.setString(5, b.getPeople());
-            ps.setString(6, b.getNum());
-
-            result = ps.executeUpdate();
+                    ps.setString(1, b.getP_id());
+                    ps.setString(2, b.getP_name());
+                    ps.setString(3, b.getArea());
+                    ps.setString(4, b.getAddress());
+                    ps.setString(5, b.getPeople());
+                    ps.setString(6, b.getNum());
+                    result = ps.executeUpdate();
+            } else {
+                JOptionPane.showMessageDialog(null, "请输入完整信息", "提示消息", JOptionPane.WARNING_MESSAGE);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -153,12 +133,12 @@ public class InsertPlace extends JFrame implements ActionListener {
             }
         }
         if (result == 1) {
-
             JOptionPane.showMessageDialog(null, "添加成功", "提示消息", JOptionPane.WARNING_MESSAGE);
             clear();
-        }else if (Verify1() == 0){
-            JOptionPane.showMessageDialog(null, "该编号已经存在", "提示信息", JOptionPane.WARNING_MESSAGE);
-        }
+        }else if (result == 0) {
+        JOptionPane.showMessageDialog(null, "添加失败", "提示消息", JOptionPane.WARNING_MESSAGE);
+        System.out.println("添加失败");
+    }
     }
 
     @Override
