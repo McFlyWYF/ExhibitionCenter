@@ -55,10 +55,10 @@
 
 * 展馆表
 
-| 列名        | 数据类型    |  说明  | 约束
-    | --------   | -----:   | :----: |
-    | Saccount        | CHAR(20)      |   登录名    | PRIMARY KEY
-    | Spwd        | CAHR(20)      |   密码    | NOT NULL
+| 列名        | 数据类型    |  说明  | 约束 ｜
+| --------   | -----:   | :----: | ----- ｜
+| Saccount        | CHAR(20)      |   登录名    | PRIMARY KEY ｜
+| Spwd        | CAHR(20)      |   密码    | NOT NULL ｜
 
 * 展品表
 
