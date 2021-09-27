@@ -148,8 +148,6 @@
 
 ###  实现界面及代码
 
-![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB15.png)
-
 ![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB8.png)
 
 ![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB9.png)
@@ -159,8 +157,6 @@
 ![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB11.png)
 
 ![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB12.png)
-
-![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB13.png)
 
 ![Image Text](https://raw.github.com/wangyufei1006/ExhibitionCenter/master/image/DB14.png)
 
